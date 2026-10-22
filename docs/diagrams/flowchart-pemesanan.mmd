@@ -1,0 +1,17 @@
+flowchart TD
+    A([Mulai]) --> B[Anggota daftar atau login]
+    B --> C[Cari katalog dan pilih 1-2 paket fisik]
+    C --> D[Isi penerima, alamat, area layanan]
+    D --> E{Input valid, kuota cukup, semua unit tersedia?}
+    E -- Tidak --> F[Tampilkan alasan; tidak membuat pesanan]
+    F --> C
+    E -- Ya --> G[Transaksi database: tahan stok dan simpan snapshot harga]
+    G --> H[pending_payment: tagihan paket + ongkir sekali]
+    H --> I[Anggota membayar tunai atau transfer]
+    I --> J{Admin telah memastikan pembayaran lunas?}
+    J -- Belum --> H
+    J -- Ya --> K[Admin konfirmasi; status paid]
+    K --> L([Lanjut pengiriman])
+    H --> M[Admin membatalkan pesanan belum dibayar]
+    M --> N[Transaksi database: cancelled dan lepas seluruh unit]
+    N --> O([Selesai pembatalan])

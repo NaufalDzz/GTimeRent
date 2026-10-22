@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1190.5511811023623" height="841.8897637795277" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1190 841" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1190.5511811023623" height="841.8897637795277"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-841)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1190.5511811023623" height="841.8897637795277" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="40" y="803.8897637795277" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(7%,14%,22%); stroke:none;" transform="translate(0,1607) scale(1,-1)">02 / Pengiriman dan pengembalian</text>
+			<text x="40" y="779.8897637795277" style="font-family: Arial; font-size: 11px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,1559) scale(1,-1)">Masa sewa mulai saat diterima penyewa. Pengembalian efektif saat seluruh barang diterima pihak GTR.</text>
+			<path d="M 40,765.889764 L 1150.551181,765.889764 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="40" y="21.0" style="font-family: Arial; font-size: 9px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,42) scale(1,-1)">GT-Rent | v1.0 | Definisi unit = paket fisik tetap berkode unik</text>
+			<text x="1100.5511811023623" y="21.0" style="font-family: Arial; font-size: 9px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,42) scale(1,-1)">2 / 2</text>
+			<rect x="70" y="646.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,96%,95%); fill-rule: evenodd;"/>
+			<text x="268.65625" y="681.5697637795276" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1363) scale(1,-1)">paid</text>
+			<text x="203.986328125" y="666.6897637795278" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1333) scale(1,-1)">ADMIN koordinasi kurir GTR</text>
+			<rect x="70" y="541.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,96%,95%); fill-rule: evenodd;"/>
+			<text x="251.318359375" y="576.5697637795276" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1153) scale(1,-1)">in_delivery</text>
+			<text x="177.9443359375" y="561.6897637795278" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1123) scale(1,-1)">ADMIN catat keberangkatan dan actor</text>
+			<rect x="70" y="436.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,96%,95%); fill-rule: evenodd;"/>
+			<text x="194.283203125" y="471.5697637795277" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,943) scale(1,-1)">Seluruh paket diterima penyewa</text>
+			<text x="177.9501953125" y="456.6897637795277" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,913) scale(1,-1)">ADMIN catat waktu kejadian dan actor</text>
+			<rect x="70" y="331.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,100%); fill-rule: evenodd;"/>
+			<text x="264.326171875" y="366.5697637795277" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,733) scale(1,-1)">active</text>
+			<text x="195.607421875" y="351.6897637795277" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,703) scale(1,-1)">due_at = received_at + 120 jam</text>
+			<rect x="70" y="226.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,96%); fill-rule: evenodd;"/>
+			<text x="195.63671875" y="261.56976377952765" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,523) scale(1,-1)">ANGGOTA memakai perangkat</text>
+			<text x="158.2568359375" y="246.68976377952765" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,493) scale(1,-1)">Kemudian menghubungi admin untuk kembali</text>
+			<path d="M 280,646.889764 L 280,601.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="280 601.8898, 283.6942 608.9857, 276.3058 608.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 280,541.889764 L 280,496.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="280 496.8898, 283.6942 503.9857, 276.3058 503.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 280,436.889764 L 280,391.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="280 391.8898, 283.6942 398.9857, 276.3058 398.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 280,331.889764 L 280,286.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="280 286.8898, 283.6942 293.9857, 276.3058 293.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<rect x="690" y="646.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,96%); fill-rule: evenodd;"/>
+			<text x="830.1591796875" y="681.5697637795276" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1363) scale(1,-1)">ANGGOTA + KURIR GTR</text>
+			<text x="769.2568359375" y="666.6897637795278" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1333) scale(1,-1)">Koordinasi dan penjemputan; status masih active</text>
+			<rect x="690" y="541.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,96%,95%); fill-rule: evenodd;"/>
+			<text x="880.6669921875" y="576.5697637795276" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1153) scale(1,-1)">ADMIN</text>
+			<text x="770.9326171875" y="561.6897637795278" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1123) scale(1,-1)">Terima semua paket; isi returned_at sebenarnya</text>
+			<polygon points="900 496.8898, 1080 451.8898, 900 406.8898, 720 451.8898" style="stroke: rgb(12%,36%,79%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(92%,96%,100%); fill-rule: evenodd;"/>
+			<text x="844.640625" y="456.5697637795277" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,913) scale(1,-1)">Waktu &gt;= awal sewa</text>
+			<text x="831.2841796875" y="441.6897637795277" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,883) scale(1,-1)">dan tidak di masa depan?</text>
+			<rect x="535" y="406.8897637795277" width="130" height="85.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,94%,93%); fill-rule: evenodd;"/>
+			<text x="576.65283203125" y="459.4897637795277" style="font-family: Arial; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,918) scale(1,-1)">Tolak data</text>
+			<text x="573.3154296875" y="447.08976377952774" style="font-family: Arial; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,894) scale(1,-1)">Status tetap</text>
+			<text x="586.9384765625" y="434.6897637795277" style="font-family: Arial; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,869) scale(1,-1)">active</text>
+			<rect x="690" y="306.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,100%); fill-rule: evenodd;"/>
+			<text x="878.5947265625" y="341.3747637795277" style="font-family: Arial; font-size: 11.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,682) scale(1,-1)">SISTEM</text>
+			<text x="776.00439453125" y="327.1147637795277" style="font-family: Arial; font-size: 11.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,654) scale(1,-1)">ceil(keterlambatan positif / 24 jam) x tarif per unit</text>
+			<rect x="690" y="201.8897637795277" width="420" height="60.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,100%); fill-rule: evenodd;"/>
+			<text x="804.6357421875" y="236.56976377952765" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,473) scale(1,-1)">returned - TRANSAKSI DATABASE</text>
+			<text x="783.931640625" y="221.68976377952765" style="font-family: Arial; font-size: 12px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,443) scale(1,-1)">Simpan denda final, actor, waktu; lepas unit</text>
+			<rect x="690" y="86.8897637795277" width="420" height="50.0" rx="7" ry="7" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="841.29931640625" y="116.17976377952766" style="font-family: Arial; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,232) scale(1,-1)">Riwayat anggota sendiri</text>
+			<text x="826.00244140625" y="102.53976377952768" style="font-family: Arial; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,205) scale(1,-1)">Laporan dan cetak oleh admin</text>
+			<path d="M 900,646.889764 L 900,601.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="900 601.8898, 903.6942 608.9857, 896.3058 608.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 900,541.889764 L 900,496.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="900 496.8898, 903.6942 503.9857, 896.3058 503.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 900,406.889764 L 900,366.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="900 366.8898, 903.6942 373.9857, 896.3058 373.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<text x="909.495849609375" y="382.8897637795277" style="font-family: Arial-Bold; font-size: 9px;fill: rgb(12%,36%,79%); stroke:none;" transform="translate(0,765) scale(1,-1)">Ya</text>
+			<path d="M 720,451.889764 L 665,451.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="665 451.8898, 672.096 448.1955, 672.096 455.584" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<text x="679.246826171875" y="463.8897637795277" style="font-family: Arial-Bold; font-size: 9px;fill: rgb(12%,36%,79%); stroke:none;" transform="translate(0,927) scale(1,-1)">Tidak</text>
+			<path d="M 600,491.889764 L 600,571.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 600,571.889764 L 690,571.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="690 571.8898, 682.904 575.584, 682.904 568.1955" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 900,306.889764 L 900,261.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="900 261.8898, 903.6942 268.9857, 896.3058 268.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 900,201.889764 L 900,136.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="900 136.8898, 903.6942 143.9857, 896.3058 143.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<path d="M 490,256.889764 L 520,256.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4; stroke-dasharray: 5, 3;"/>
+			<path d="M 520,256.889764 L 520,736.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4; stroke-dasharray: 5, 3;"/>
+			<path d="M 520,736.889764 L 900,736.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4; stroke-dasharray: 5, 3;"/>
+			<path d="M 900,736.889764 L 900,706.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4; stroke-dasharray: 5, 3;"/>
+			<polygon points="900 706.8898, 903.6942 713.9857, 896.3058 713.9857" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(36%,42%,50%); fill-rule: evenodd;"/>
+			<text x="664.99560546875" y="746.8897637795277" style="font-family: Arial-Bold; font-size: 9px;fill: rgb(12%,36%,79%); stroke:none;" transform="translate(0,1493) scale(1,-1)">Lanjut pengembalian</text>
+			<text x="65" y="91.8897637795277" style="font-family: Arial; font-size: 10px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,183) scale(1,-1)">Tepat jatuh tempo: denda 0. Overdue adalah label turunan,</text>
+			<text x="65" y="71.8897637795277" style="font-family: Arial; font-size: 10px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,143) scale(1,-1)">bukan pengembalian otomatis. Periksa maintenance sebelum sewa berikutnya.</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,82 @@
+erDiagram
+    USERS ||--|| PROFILES : memiliki
+    USERS ||--o{ RENTALS : memesan
+    RENTALS ||--|{ RENTAL_ITEMS : berisi
+    UNITS ||--o{ RENTAL_ITEMS : tercatat_dalam
+    UNITS ||--o{ CATEGORY_UNIT : dikategorikan
+    CATEGORIES ||--o{ CATEGORY_UNIT : menghubungkan
+    SETTINGS ||..o{ RENTALS : nilai_disalin_saat_checkout
+
+    USERS {
+        bigint id PK
+        string name
+        string email UK
+        string password
+        string role
+        datetime deleted_at
+    }
+    PROFILES {
+        bigint id PK
+        bigint user_id FK,UK
+        string phone
+        text address
+        string service_area
+    }
+    CATEGORIES {
+        bigint id PK
+        string name UK
+        datetime deleted_at
+    }
+    UNITS {
+        bigint id PK
+        string code UK
+        string name
+        string kind
+        text specs_text
+        text contents_text
+        bigint package_price
+        bigint daily_fine
+        string condition_status
+        datetime deleted_at
+    }
+    CATEGORY_UNIT {
+        bigint category_id PK,FK
+        bigint unit_id PK,FK
+    }
+    RENTALS {
+        bigint id PK
+        string number UK
+        bigint user_id FK
+        string status
+        string recipient_name
+        string recipient_phone
+        text delivery_address
+        string service_area
+        bigint shipping_fee_snapshot
+        bigint subtotal
+        bigint initial_total
+        datetime payment_confirmed_at
+        datetime dispatched_at
+        datetime received_at
+        datetime due_at
+        datetime returned_at
+        datetime return_recorded_at
+        datetime cancelled_at
+    }
+    RENTAL_ITEMS {
+        bigint id PK
+        bigint rental_id FK
+        bigint unit_id FK
+        string code_snapshot
+        string name_snapshot
+        text contents_snapshot
+        bigint package_price_snapshot
+        bigint daily_fine_snapshot
+        int late_days
+        bigint fine_amount
+    }
+    SETTINGS {
+        bigint id PK
+        bigint flat_shipping_fee
+        text service_area_text
+    }

@@ -1,0 +1,251 @@
+{
+  "project": "GT-Rent - Gaming Time Rent",
+  "document_version": "1.0",
+  "date": "2026-10-22",
+  "pricing_status": "HYPOTHETICAL ACADEMIC DEMO - NOT MARKET QUOTES",
+  "currency": "IDR",
+  "deadline_assumed": "2026-10-23",
+  "team": {
+    "group": "",
+    "team_name": "",
+    "members": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "settings": {
+    "flat_shipping_fee": 75000,
+    "round_trip": true,
+    "service_areas": [
+      "Bandung",
+      "Bojongsoang",
+      "Dayeuhkolot"
+    ]
+  },
+  "max_held_units_per_member": 2,
+  "fixed_period_hours": 120,
+  "held_statuses": [
+    "pending_payment",
+    "paid",
+    "in_delivery",
+    "active"
+  ],
+  "terminal_statuses": [
+    "returned",
+    "cancelled"
+  ],
+  "units": [
+    {
+      "code": "PC-MID-001",
+      "name": "PC Mid + IPS",
+      "kind": "pc_monitor",
+      "specs_text": "Ryzen 5 7600; Inno3D RTX 5070 Twin X2 12GB; B650M DS3H; RAM 32GB DDR5-6000; NVMe 1TB; PSU 750W Gold ATX3.x; Acer VG271U M3 27 inci 1440p IPS 180Hz.",
+      "contents": [
+        "PC-MID-001/PC - satu PC sesuai spesifikasi",
+        "PC-MID-001/MON - satu monitor beserta stand",
+        "PC-MID-001/CABLE - dua kabel daya dan satu DisplayPort"
+      ],
+      "package_price": 500000,
+      "daily_fine": 100000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "PC + Monitor",
+        "Mid-Range"
+      ]
+    },
+    {
+      "code": "PC-MID-002",
+      "name": "PC Mid + IPS",
+      "kind": "pc_monitor",
+      "specs_text": "Ryzen 5 7600; Inno3D RTX 5070 Twin X2 12GB; B650M DS3H; RAM 32GB DDR5-6000; NVMe 1TB; PSU 750W Gold ATX3.x; Acer VG271U M3 27 inci 1440p IPS 180Hz.",
+      "contents": [
+        "PC-MID-002/PC - satu PC sesuai spesifikasi",
+        "PC-MID-002/MON - satu monitor beserta stand",
+        "PC-MID-002/CABLE - dua kabel daya dan satu DisplayPort"
+      ],
+      "package_price": 500000,
+      "daily_fine": 100000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "PC + Monitor",
+        "Mid-Range"
+      ]
+    },
+    {
+      "code": "PC-HIGH-001",
+      "name": "PC High + OLED",
+      "kind": "pc_monitor",
+      "specs_text": "Ryzen 7 9800X3D; Colorful RTX 5070 Ti Battle AX 16GB; B650M DS3H dengan BIOS sesuai; RAM 32GB DDR5-6000; NVMe 2TB; PSU850W Gold ATX3.x; tower cooler AM5; MSI MPG271QRX QD-OLED 1440p360Hz.",
+      "contents": [
+        "PC-HIGH-001/PC - satu PC sesuai spesifikasi",
+        "PC-HIGH-001/MON - satu monitor beserta stand",
+        "PC-HIGH-001/CABLE - dua kabel daya dan satu DisplayPort"
+      ],
+      "package_price": 1200000,
+      "daily_fine": 200000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "PC + Monitor",
+        "High-End",
+        "OLED"
+      ]
+    },
+    {
+      "code": "PER-A1-001",
+      "name": "A1 High-End Lengkap",
+      "kind": "peripheral",
+      "specs_text": "Logitech PRO X2 SUPERSTRIKE; Wooting 80HE; Logitech PRO X3 LIGHTSPEED; ARTISAN NINJA FX ZERO XL SOFT",
+      "contents": [
+        "PER-A1-001/MOUSE - Logitech PRO X2 SUPERSTRIKE",
+        "PER-A1-001/KEYBOARD - Wooting 80HE",
+        "PER-A1-001/HEADSET - Logitech PRO X3 LIGHTSPEED",
+        "PER-A1-001/MOUSEPAD - ARTISAN NINJA FX ZERO XL SOFT",
+        "PER-A1-001/ACC - receiver, kabel, mikrofon atau adaptor yang diperlukan perangkat paket ini"
+      ],
+      "package_price": 350000,
+      "daily_fine": 50000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "Peripheral",
+        "High-End",
+        "Lengkap"
+      ]
+    },
+    {
+      "code": "PER-A2-001",
+      "name": "A2 Mid-Range Lengkap",
+      "kind": "peripheral",
+      "specs_text": "Logitech G304 LIGHTSPEED; AULA F75 linear (mode kabel); HyperX Cloud III wired; Logitech G640",
+      "contents": [
+        "PER-A2-001/MOUSE - Logitech G304 LIGHTSPEED",
+        "PER-A2-001/KEYBOARD - AULA F75 linear (mode kabel)",
+        "PER-A2-001/HEADSET - HyperX Cloud III wired",
+        "PER-A2-001/MOUSEPAD - Logitech G640",
+        "PER-A2-001/ACC - receiver, kabel, mikrofon atau adaptor yang diperlukan perangkat paket ini"
+      ],
+      "package_price": 125000,
+      "daily_fine": 20000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "Peripheral",
+        "Mid-Range",
+        "Lengkap"
+      ]
+    },
+    {
+      "code": "PER-B1-001",
+      "name": "B1 Mouse + Headset High",
+      "kind": "peripheral",
+      "specs_text": "Logitech PRO X2 SUPERSTRIKE; Logitech PRO X3 LIGHTSPEED; ARTISAN NINJA FX ZERO XL SOFT",
+      "contents": [
+        "PER-B1-001/MOUSE - Logitech PRO X2 SUPERSTRIKE",
+        "PER-B1-001/HEADSET - Logitech PRO X3 LIGHTSPEED",
+        "PER-B1-001/MOUSEPAD - ARTISAN NINJA FX ZERO XL SOFT",
+        "PER-B1-001/ACC - receiver, kabel, mikrofon atau adaptor yang diperlukan perangkat paket ini"
+      ],
+      "package_price": 250000,
+      "daily_fine": 30000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "Peripheral",
+        "High-End",
+        "Mouse + Headset"
+      ]
+    },
+    {
+      "code": "PER-B2-001",
+      "name": "B2 Mouse + Headset Mid",
+      "kind": "peripheral",
+      "specs_text": "Logitech G304 LIGHTSPEED; HyperX Cloud III wired; Logitech G640",
+      "contents": [
+        "PER-B2-001/MOUSE - Logitech G304 LIGHTSPEED",
+        "PER-B2-001/HEADSET - HyperX Cloud III wired",
+        "PER-B2-001/MOUSEPAD - Logitech G640",
+        "PER-B2-001/ACC - receiver, kabel, mikrofon atau adaptor yang diperlukan perangkat paket ini"
+      ],
+      "package_price": 75000,
+      "daily_fine": 15000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "Peripheral",
+        "Mid-Range",
+        "Mouse + Headset"
+      ]
+    },
+    {
+      "code": "PER-H1-001",
+      "name": "H1 Headset High",
+      "kind": "peripheral",
+      "specs_text": "Logitech PRO X3 LIGHTSPEED",
+      "contents": [
+        "PER-H1-001/HEADSET - Logitech PRO X3 LIGHTSPEED",
+        "PER-H1-001/ACC - receiver, kabel, mikrofon atau adaptor yang diperlukan perangkat paket ini"
+      ],
+      "package_price": 100000,
+      "daily_fine": 20000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "Peripheral",
+        "High-End",
+        "Headset"
+      ]
+    },
+    {
+      "code": "PER-H2-001",
+      "name": "H2 Headset Mid",
+      "kind": "peripheral",
+      "specs_text": "HyperX Cloud III wired",
+      "contents": [
+        "PER-H2-001/HEADSET - HyperX Cloud III wired",
+        "PER-H2-001/ACC - receiver, kabel, mikrofon atau adaptor yang diperlukan perangkat paket ini"
+      ],
+      "package_price": 50000,
+      "daily_fine": 10000,
+      "condition_status": "ready",
+      "categories": [
+        "Gaming",
+        "Peripheral",
+        "Mid-Range",
+        "Headset"
+      ]
+    }
+  ],
+  "demo_users": [
+    {
+      "name": "Admin Demo",
+      "email": "admin@gtrent.test",
+      "role": "admin"
+    },
+    {
+      "name": "Anggota Demo 1",
+      "email": "anggota1@gtrent.test",
+      "role": "member"
+    },
+    {
+      "name": "Anggota Demo 2",
+      "email": "anggota2@gtrent.test",
+      "role": "member"
+    },
+    {
+      "name": "Anggota Demo 3",
+      "email": "anggota3@gtrent.test",
+      "role": "member"
+    }
+  ],
+  "account_password_note": "Set through local demo environment; no real credentials included.",
+  "examples": {
+    "mid_fullset_initial": 700000,
+    "mid_fullset_fine_one_day": 120000,
+    "high_fullset_initial": 1625000,
+    "high_fullset_fine_one_day": 250000
+  }
+}

@@ -1,0 +1,19 @@
+flowchart TD
+    A([Pesanan paid]) --> B[Admin koordinasi kurir GTR]
+    B --> C[Admin catat keberangkatan; in_delivery]
+    C --> D[Seluruh paket diterima penyewa]
+    D --> E[Admin catat received_at sebenarnya]
+    E --> F[active; due_at = received_at + 120 jam]
+    F --> G[Anggota menggunakan perangkat]
+    G --> H[Anggota menghubungi admin untuk penjemputan]
+    H --> I[Kurir GTR menjemput; unit masih active]
+    I --> J[Seluruh paket diterima pihak GTR]
+    J --> K[Admin periksa kelengkapan dan isi returned_at sebenarnya]
+    K --> L{Urutan waktu valid dan tidak di masa depan?}
+    L -- Tidak --> M[Tolak perubahan; status tetap active]
+    M --> K
+    L -- Ya --> N[Hitung hari terlambat dan denda per unit]
+    N --> O[Transaksi database: returned, denda final, unit dilepas]
+    O --> P[Unit siap disewa lagi atau ditandai maintenance oleh admin]
+    P --> Q[Riwayat anggota dan laporan cetak admin]
+    Q --> R([Selesai])

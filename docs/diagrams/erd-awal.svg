@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1190.5511811023623" height="841.8897637795277" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1190 841" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1190.5511811023623" height="841.8897637795277"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-841)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1190.5511811023623" height="841.8897637795277" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="40" y="803.8897637795277" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(7%,14%,22%); stroke:none;" transform="translate(0,1607) scale(1,-1)">ERD awal / 8 tabel bisnis</text>
+			<text x="40" y="779.8897637795277" style="font-family: Arial; font-size: 11px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,1559) scale(1,-1)">PK = primary key | FK = foreign key | UQ = unique | waktu UTC, tampilan WIB | uang integer rupiah</text>
+			<path d="M 40,765.889764 L 1150.551181,765.889764 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="40" y="21.0" style="font-family: Arial; font-size: 9px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,42) scale(1,-1)">GT-Rent | v1.0 | Definisi unit = paket fisik tetap berkode unik</text>
+			<text x="1100.5511811023623" y="21.0" style="font-family: Arial; font-size: 9px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,42) scale(1,-1)">1 / 1</text>
+			<rect x="40" y="613.8897637795277" width="255" height="113.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="40" y="694.8897637795277" width="255" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="52" y="704.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,1409) scale(1,-1)">users</text>
+			<text x="51" y="675.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1351) scale(1,-1)">PK id</text>
+			<text x="51" y="656.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1313) scale(1,-1)">UQ email; name; password</text>
+			<text x="51" y="637.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1275) scale(1,-1)">role: admin/member</text>
+			<text x="51" y="618.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1237) scale(1,-1)">deleted_at; timestamps</text>
+			<rect x="40" y="367.8897637795277" width="255" height="94.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="40" y="429.8897637795277" width="255" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="52" y="439.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,879) scale(1,-1)">profiles</text>
+			<text x="51" y="410.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,821) scale(1,-1)">PK id</text>
+			<text x="51" y="391.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,783) scale(1,-1)">FK UQ user_id</text>
+			<text x="51" y="372.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,745) scale(1,-1)">phone; address; service_area</text>
+			<rect x="430" y="419.8897637795277" width="330" height="307.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="430" y="694.8897637795277" width="330" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="442" y="704.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,1409) scale(1,-1)">rentals</text>
+			<text x="441" y="675.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1351) scale(1,-1)">PK id; UQ number; FK user_id</text>
+			<text x="441" y="656.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1313) scale(1,-1)">status; recipient_name; recipient_phone</text>
+			<text x="441" y="637.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1275) scale(1,-1)">delivery_address; service_area</text>
+			<text x="441" y="618.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1237) scale(1,-1)">shipping_fee_snapshot; subtotal; initial_total</text>
+			<text x="441" y="599.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1199) scale(1,-1)">payment_method; payment_confirmed_at</text>
+			<text x="441" y="580.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1161) scale(1,-1)">FK payment_confirmed_by</text>
+			<text x="441" y="561.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1123) scale(1,-1)">dispatched_at; FK dispatched_by</text>
+			<text x="441" y="542.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1085) scale(1,-1)">received_at; receipt_recorded_at</text>
+			<text x="441" y="523.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1047) scale(1,-1)">FK receipt_recorded_by; due_at</text>
+			<text x="441" y="504.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1009) scale(1,-1)">returned_at; return_recorded_at</text>
+			<text x="441" y="485.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,971) scale(1,-1)">FK returned_by; return_notes</text>
+			<text x="441" y="466.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,933) scale(1,-1)">cancelled_at; FK cancelled_by</text>
+			<text x="441" y="447.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,895) scale(1,-1)">cancel_reason; timestamps</text>
+			<text x="441" y="428.8897637795277" style="font-family: Arial; font-size: 8.3px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,857) scale(1,-1)">Actor FK mengarah ke users; role dicek aplikasi.</text>
+			<rect x="885" y="556.8897637795277" width="265" height="170.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="885" y="694.8897637795277" width="265" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="897" y="704.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,1409) scale(1,-1)">rental_items</text>
+			<text x="896" y="675.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1351) scale(1,-1)">PK id; FK rental_id; FK unit_id</text>
+			<text x="896" y="656.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1313) scale(1,-1)">code_snapshot; name_snapshot</text>
+			<text x="896" y="637.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1275) scale(1,-1)">contents_snapshot</text>
+			<text x="896" y="618.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1237) scale(1,-1)">package_price_snapshot</text>
+			<text x="896" y="599.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1199) scale(1,-1)">daily_fine_snapshot</text>
+			<text x="896" y="580.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1161) scale(1,-1)">late_days; fine_amount</text>
+			<text x="896" y="561.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1123) scale(1,-1)">UQ (rental_id, unit_id)</text>
+			<rect x="885" y="212.8897637795277" width="265" height="174.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="885" y="354.8897637795277" width="265" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="897" y="364.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,729) scale(1,-1)">units</text>
+			<text x="896" y="335.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,671) scale(1,-1)">PK id; UQ code; name</text>
+			<text x="896" y="316.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,633) scale(1,-1)">kind: pc_monitor/peripheral</text>
+			<text x="896" y="297.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,595) scale(1,-1)">specs_text; contents_text</text>
+			<text x="896" y="278.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,557) scale(1,-1)">package_price; daily_fine</text>
+			<text x="896" y="259.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,519) scale(1,-1)">condition_status: ready/maintenance</text>
+			<text x="896" y="240.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,481) scale(1,-1)">deleted_at; timestamps</text>
+			<text x="896" y="221.8897637795277" style="font-family: Arial; font-size: 8.3px;fill: rgb(36%,42%,50%); stroke:none;" transform="translate(0,443) scale(1,-1)">Stok diturunkan dari rental aktif/ditahan.</text>
+			<rect x="40" y="156.8897637795277" width="225" height="75.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="40" y="199.8897637795277" width="225" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="52" y="209.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,419) scale(1,-1)">categories</text>
+			<text x="51" y="180.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,361) scale(1,-1)">PK id; UQ name</text>
+			<text x="51" y="161.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,323) scale(1,-1)">deleted_at; timestamps</text>
+			<rect x="315" y="116.8897637795277" width="225" height="75.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="315" y="159.8897637795277" width="225" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="327" y="169.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,339) scale(1,-1)">category_unit</text>
+			<text x="326" y="140.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,281) scale(1,-1)">PK FK category_id</text>
+			<text x="326" y="121.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,243) scale(1,-1)">PK FK unit_id</text>
+			<rect x="590" y="97.8897637795277" width="240" height="94.0" rx="6" ry="6" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="590" y="159.8897637795277" width="240" height="32.0" style="stroke: rgb(7%,14%,22%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,14%,22%); fill-rule: evenodd;"/>
+			<text x="602" y="169.8897637795277" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,339) scale(1,-1)">settings</text>
+			<text x="601" y="140.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,281) scale(1,-1)">PK id = 1</text>
+			<text x="601" y="121.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,243) scale(1,-1)">flat_shipping_fee</text>
+			<text x="601" y="102.8897637795277" style="font-family: Arial; font-size: 10.5px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,205) scale(1,-1)">service_area_text</text>
+			<path d="M 167,613.889764 L 167,461.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<text x="180" y="591.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1183) scale(1,-1)">1</text>
+			<text x="180" y="475.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,951) scale(1,-1)">1</text>
+			<path d="M 295,659.889764 L 430,659.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<text x="307" y="669.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1339) scale(1,-1)">1</text>
+			<text x="404" y="669.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1339) scale(1,-1)">0..N</text>
+			<path d="M 760,631.889764 L 885,631.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<text x="772" y="641.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1283) scale(1,-1)">1</text>
+			<text x="853" y="641.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1283) scale(1,-1)">1..2</text>
+			<path d="M 1017,386.889764 L 1017,556.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<text x="1030" y="402.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,805) scale(1,-1)">1</text>
+			<text x="1030" y="531.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,1063) scale(1,-1)">0..N</text>
+			<path d="M 265,164.889764 L 315,164.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<text x="272" y="175.8897637795277" style="font-family: Arial-Bold; font-size: 9px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,351) scale(1,-1)">1</text>
+			<text x="298" y="175.8897637795277" style="font-family: Arial-Bold; font-size: 9px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,351) scale(1,-1)">N</text>
+			<path d="M 427,116.889764 L 427,56.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 427,56.889764 L 855,56.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 855,56.889764 L 855,286.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 855,286.889764 L 885,286.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<text x="441" y="93.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,187) scale(1,-1)">N</text>
+			<text x="869" y="299.8897637795277" style="font-family: Arial-Bold; font-size: 10px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,599) scale(1,-1)">1</text>
+			<path d="M 710,191.889764 L 710,419.889764 Z" style="stroke: rgb(36%,42%,50%); stroke-linecap: butt; stroke-width: 1.4; stroke-dasharray: 5, 3;"/>
+			<text x="672.238525390625" y="238.8897637795277" style="font-family: Arial; font-size: 9px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,477) scale(1,-1)">salin ongkir</text>
+			<rect x="42" y="54.8897637795277" width="335" height="42.0" rx="7" ry="7" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,96%,100%); fill-rule: evenodd;"/>
+			<text x="122.32788085937499" y="79.39976377952769" style="font-family: Arial; font-size: 9px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,158) scale(1,-1)">Garis putus-putus = salinan nilai; bukan FK.</text>
+			<text x="139.954345703125" y="68.23976377952772" style="font-family: Arial; font-size: 9px;fill: rgb(12%,19%,27%); stroke:none;" transform="translate(0,136) scale(1,-1)">Kamus data lengkap: dokumen 03.</text>
+		</g>
+	</g>
+</svg>
