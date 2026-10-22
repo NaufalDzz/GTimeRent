@@ -6,6 +6,13 @@
 /boost.json
 /handoff.md
 
+output/verification.json
+output/GT-Rent-Paket-Dokumen.zip
+/docs/research
+docs/diagrams/status-transaksi.mmd
+docs/06-Pembagian-Kerja-dan-UAT.md
+docs/00-PANDUAN-DOKUMEN.md
+
 *.log
 .DS_Store
 .env
