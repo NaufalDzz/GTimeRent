@@ -2,7 +2,7 @@
 
 Versi 1.0 | 22 Oktober 2026 | Target tugas: besok, 23 Oktober 2026.
 
-Diagram ini mengikuti BRD dan PRD versi 1.0. Satu paket PC + monitor = satu unit; satu paket peripheral tetap = satu unit. Fullset menggabungkan keduanya menjadi dua unit. Kuota dihitung lintas seluruh pesanan anggota.
+Diagram ini mengikuti BRD dan PRD versi 1.0. Satu paket PC + monitor dihitung satu unit. Satu paket peripheral tetap juga satu unit. Fullset menggabungkan keduanya menjadi dua unit. Kuota berlaku untuk seluruh pesanan anggota.
 
 ## 1. Pemesanan dan pembayaran
 
@@ -29,7 +29,7 @@ flowchart TD
 - Pemeriksaan kuota, pemeriksaan ketersediaan, dan penyimpanan pesanan harus satu operasi atomik.
 - Stok ditahan pada status `pending_payment`, `paid`, `in_delivery`, dan `active`.
 - Anggota yang sudah menahan dua unit tidak dapat membuat pesanan tambahan meskipun belum membayar.
-- Fullset tidak memiliki stok ketiga. Ia memasukkan dua kode unit yang berbeda ke satu pesanan.
+- Pilihan fullset memasukkan dua kode unit yang berbeda ke satu pesanan, tanpa membuat stok ketiga.
 - Ongkir demo Rp75.000 per pesanan mencakup antar-jemput dalam area demo Bandung, Bojongsoang, dan Dayeuhkolot. Tarif ini asumsi akademik.
 
 ## 2. Pengiriman, penggunaan, dan pengembalian
@@ -56,7 +56,7 @@ flowchart TD
     Q --> R([Selesai])
 ```
 
-Jika perangkat diterima GTR tepat pada jatuh tempo, denda nol. Keterlambatan positif sampai 24 jam dihitung satu hari; lebih dari 24 sampai 48 jam dihitung dua hari. Waktu admin memasukkan data disimpan terpisah dari waktu kejadian.
+Jika GTR menerima perangkat tepat pada jatuh tempo, denda nol. Keterlambatan positif sampai 24 jam dihitung satu hari. Keterlambatan lebih dari 24 sampai 48 jam dihitung dua hari. Sistem menyimpan waktu pencatatan admin terpisah dari waktu kejadian.
 
 ## 3. Status transaksi
 
@@ -72,7 +72,7 @@ stateDiagram-v2
     returned --> [*]
 ```
 
-`overdue` adalah label turunan ketika status `active` dan waktu sekarang melewati `due_at`; bukan status tersimpan atau pengembalian otomatis. Semua perubahan status dilakukan admin, selain pembuatan pesanan oleh anggota.
+Label `overdue` muncul ketika status `active` dan waktu sekarang melewati `due_at`. Sistem tidak menyimpannya sebagai status tersendiri atau mengembalikan unit secara otomatis. Admin mencatat semua perubahan status setelah anggota membuat pesanan.
 
 Pembatalan otomatis, pengembalian sebagian, perubahan isi paket, penambahan unit setelah checkout, dan pembatalan setelah lunas tidak termasuk alur versi pertama. Kasus komersial di luar alur ditangani manual dan tidak boleh diakali dengan mengubah status langsung.
 
@@ -81,7 +81,7 @@ Pembatalan otomatis, pengembalian sebagian, perubahan isi paket, penambahan unit
 | Aksi | Anggota | Admin | Kurir |
 |---|---|---|---|
 | Daftar, login, ubah profil sendiri | Ya | Login dan profil sendiri | Tidak ada akun |
-| Cari katalog, pesan untuk diri sendiri | Ya | Katalog dapat dibaca; tidak menyewa sebagai admin | Melalui koordinasi admin |
+| Cari katalog, pesan untuk diri sendiri | Ya | Dapat membaca katalog, tanpa menyewa sebagai admin | Melalui koordinasi admin |
 | Konfirmasi pembayaran/pengiriman/penerimaan | Tidak | Ya | Memberi kabar kepada admin |
 | Membatalkan pesanan belum lunas | Menghubungi admin | Ya | Tidak |
 | Mencatat pengembalian dan denda | Tidak | Ya | Menyerahkan barang ke GTR |
