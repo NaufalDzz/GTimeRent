@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>GTime Rent · Pesanan dibuat</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0608}
+a{color:#F4B3D3}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #F6EEF2; background: #0A0608; min-height: 100vh">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 40px; border-bottom: 1px solid #1F151A">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 36px">
+<a href="Main.dc.html" style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 20px; color: #F6EEF2; text-decoration: none">/GTime Rent</a>
+<nav aria-label="Navigasi anggota" style="display: flex; gap: 8px; font-size: 14px">
+<a href="Katalog.dc.html" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; color: #D9C7D0; text-decoration: none">Katalog</a>
+<a href="Pesanan.dc.html" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; background: #1B1217; color: #FFFFFF; text-decoration: none">Pesanan saya</a>
+</nav>
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid #2B1D24; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #D9C7D0">KUOTA <span style="color: #FFFFFF">2/2</span> UNIT</span>
+<a href="Profil.dc.html" aria-label="Profil Anggota Demo 1" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #5A1636; color: #F6EEF2; font-size: 13px; font-weight: 600; text-decoration: none">AD</a>
+</div>
+</header>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: 40px 32px 96px; box-sizing: border-box">
+
+<section aria-labelledby="h-ok" style="position: relative; overflow: hidden; padding: 36px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(140deg, #4A1530 0%, #22091A 55%, #3A1620 100%)">
+<div aria-hidden="true" style="position: absolute; width: 900px; height: 900px; right: -520px; top: -640px; border-radius: 50%; background: #12060B; box-shadow: 0 0 100px 10px rgba(226,88,156,0.3), inset -16px 16px 40px rgba(255,214,234,0.35)"></div>
+<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: flex-end">
+<div style="min-width: 0">
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #3A2A12; color: #FFD58A; font-size: 13px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFC24D"></span>Menunggu bayar</span>
+<h1 id="h-ok" style="margin: 16px 0 0; font-family: Poppins, sans-serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.02em">Pesanan dibuat.<br>Unit sudah kami tahan.</h1>
+<p style="margin: 12px 0 0; max-width: 560px; font-size: 15px; line-height: 1.6; color: #E7D6DF">Selesaikan pembayaran ke admin. Setelah admin mengonfirmasi, status berubah jadi Lunas dan unit disiapkan untuk dikirim.</p>
+</div>
+<div style="padding: 16px 20px; border-radius: 16px; background: rgba(10,6,8,0.65); border: 1px solid rgba(255,255,255,0.12)">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #D9C7D0">KODE PESANAN</div>
+<div style="margin-top: 6px; display: flex; align-items: center; gap: 10px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 18px">GTR-20261022-0012</span>
+<button type="button" onClick="{{copy}}" aria-label="Salin kode pesanan" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; border: 1px solid #3A2830; background: transparent; color: #F6EEF2; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a1 1 0 0 1 1-1h9"></path></svg></button>
+</div>
+<div role="status" style="margin-top: 4px; min-height: 18px; font-size: 12px; color: #9BE7C0">{{copyMsg}}</div>
+<div style="font-size: 12px; color: #D9C7D0">Dibuat 22 Okt 2026, 08.14</div>
+</div>
+</div>
+</section>
+
+<div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<section aria-labelledby="h-bayar" style="padding: 24px; border-radius: 18px; border: 1px solid #2B1D24; background: #130C10">
+<h2 id="h-bayar" style="margin: 0; font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">Cara bayar</h2>
+<div role="radiogroup" aria-label="Metode bayar" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" role="radio" aria-checked="{{isTf}}" onClick="{{pickTf}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{tfBorder}}; background: {{tfBg}}; color: {{tfColor}}; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Transfer bank</button>
+<button type="button" role="radio" aria-checked="{{isCash}}" onClick="{{pickCash}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid {{cashBorder}}; background: {{cashBg}}; color: {{cashColor}}; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Tunai ke admin</button>
+</div>
+
+<sc-if value="{{isTf}}" hint-placeholder-val="{{ true }}">
+<ol style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
+<li style="display: flex; gap: 14px"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #2A1720; font-family: 'JetBrains Mono', monospace; font-size: 12px">1</span><div style="min-width: 0"><div style="font-size: 15px">Transfer tepat <b style="font-family: 'JetBrains Mono', monospace; font-weight: 500">Rp700.000</b></div>
+<div style="margin-top: 8px; padding: 12px 14px; border-radius: 12px; background: #0E080B; border: 1px dashed #3A2830; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #D9C7D0">[REKENING ADMIN] · a.n. [NAMA ADMIN]</div></div></li>
+<li style="display: flex; gap: 14px"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #2A1720; font-family: 'JetBrains Mono', monospace; font-size: 12px">2</span><div style="font-size: 15px; line-height: 1.55">Tulis <span style="font-family: 'JetBrains Mono', monospace">GTR-20261022-0012</span> di berita transfer.</div></li>
+<li style="display: flex; gap: 14px"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #2A1720; font-family: 'JetBrains Mono', monospace; font-size: 12px">3</span><div style="font-size: 15px; line-height: 1.55">Kirim bukti transfer ke admin lewat WhatsApp. Admin akan mengonfirmasi secara manual.</div></li>
+</ol>
+</sc-if>
+<sc-if value="{{isCash}}" hint-placeholder-val="{{ false }}">
+<ol style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
+<li style="display: flex; gap: 14px"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #2A1720; font-family: 'JetBrains Mono', monospace; font-size: 12px">1</span><div style="font-size: 15px; line-height: 1.55">Hubungi admin untuk janji temu, sebutkan kode pesanan.</div></li>
+<li style="display: flex; gap: 14px"><span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #2A1720; font-family: 'JetBrains Mono', monospace; font-size: 12px">2</span><div style="font-size: 15px; line-height: 1.55">Bayar tunai <b style="font-family: 'JetBrains Mono', monospace; font-weight: 500">Rp700.000</b>. Admin mencatat pembayaran di sistem.</div></li>
+</ol>
+</sc-if>
+
+<a href="#" style="margin-top: 22px; display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 24px; border-radius: 999px; background: #F6EEF2; color: #0A0608; font-weight: 600; font-size: 15px; text-decoration: none">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.5-4A8 8 0 1 1 8 18.5z"></path></svg>Hubungi admin</a>
+</section>
+
+<section aria-labelledby="h-next" style="padding: 24px; border-radius: 18px; border: 1px solid #2B1D24; background: #130C10">
+<h2 id="h-next" style="margin: 0; font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">Yang terjadi berikutnya</h2>
+<ol style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+<li style="display: flex; gap: 14px; padding-bottom: 16px"><span style="flex: none; width: 12px; height: 12px; margin-top: 4px; border-radius: 50%; background: #FFC24D; box-shadow: 0 0 0 4px rgba(255,194,77,0.2)"></span><div><div style="font-size: 14px; font-weight: 600">Menunggu bayar</div><div style="font-size: 13px; color: #B3A0AA">Sekarang. Unit ditahan untukmu.</div></div></li>
+<li style="display: flex; gap: 14px; padding-bottom: 16px"><span style="flex: none; width: 12px; height: 12px; margin-top: 4px; border-radius: 50%; border: 2px solid #3A2830; box-sizing: border-box"></span><div><div style="font-size: 14px; color: #D9C7D0">Lunas</div><div style="font-size: 13px; color: #94808A">Setelah admin konfirmasi pembayaran.</div></div></li>
+<li style="display: flex; gap: 14px; padding-bottom: 16px"><span style="flex: none; width: 12px; height: 12px; margin-top: 4px; border-radius: 50%; border: 2px solid #3A2830; box-sizing: border-box"></span><div><div style="font-size: 14px; color: #D9C7D0">Dikirim</div><div style="font-size: 13px; color: #94808A">Unit diantar ke alamatmu.</div></div></li>
+<li style="display: flex; gap: 14px"><span style="flex: none; width: 12px; height: 12px; margin-top: 4px; border-radius: 50%; border: 2px solid #3A2830; box-sizing: border-box"></span><div><div style="font-size: 14px; color: #D9C7D0">Aktif · 120 jam</div><div style="font-size: 13px; color: #94808A">Hitung mundur mulai saat unit diterima.</div></div></li>
+</ol>
+</section>
+</div>
+
+<aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<section aria-labelledby="h-ring" style="padding: 24px; border-radius: 18px; border: 1px solid #2B1D24; background: #130C10">
+<h2 id="h-ring" style="margin: 0; font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">Ringkasan</h2>
+<ul style="margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px"><div><div>PC Mid + IPS</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #94808A">PC-MID-001</div></div><span style="font-family: 'JetBrains Mono', monospace">Rp500.000</span></li>
+<li style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px"><div><div>A2 Mid-Range Lengkap</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #94808A">PER-A2-001</div></div><span style="font-family: 'JetBrains Mono', monospace">Rp125.000</span></li>
+<li style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: #D9C7D0"><span>Ongkir flat</span><span style="font-family: 'JetBrains Mono', monospace">Rp75.000</span></li>
+</ul>
+<div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #2B1D24; display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 14px">Total</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 22px">Rp700.000</span></div>
+<div style="margin-top: 16px; font-size: 13px; line-height: 1.55; color: #B3A0AA">Kirim ke: Jl. Telekomunikasi No. 1, Bojongsoang</div>
+</section>
+
+<section aria-label="Info penahanan" style="padding: 20px; border-radius: 18px; background: #1B1217; display: flex; flex-direction: column; gap: 12px; font-size: 13px; line-height: 1.55; color: #D9C7D0">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em">KUOTA DITAHAN</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #F6EEF2">2/2</span></div>
+<div style="display: flex; gap: 4px"><span style="flex: 1 1 0; height: 6px; border-radius: 3px; background: #E2589C"></span><span style="flex: 1 1 0; height: 6px; border-radius: 3px; background: #E2589C"></span></div>
+<p style="margin: 0">Pesanan tidak batal otomatis. Kalau ingin membatalkan, hubungi admin. Selama pesanan ini berjalan, kamu belum bisa checkout unit lain.</p>
+</section>
+
+<a href="Pesanan.dc.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 999px; border: 1px solid #3A2830; color: #F6EEF2; font-size: 15px; text-decoration: none">Lihat di Pesanan saya</a>
+</aside>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { method: 'tf', copied: false };
+  }
+  renderVals() {
+    const tf = this.state.method === 'tf';
+    const on = { border: '#F6EEF2', bg: '#F6EEF2', color: '#0A0608' };
+    const off = { border: '#3A2830', bg: 'transparent', color: '#D9C7D0' };
+    const a = tf ? on : off, b = tf ? off : on;
+    return {
+      isTf: tf, isCash: !tf,
+      tfBorder: a.border, tfBg: a.bg, tfColor: a.color,
+      cashBorder: b.border, cashBg: b.bg, cashColor: b.color,
+      pickTf: () => this.setState({ method: 'tf' }),
+      pickCash: () => this.setState({ method: 'cash' }),
+      copyMsg: this.state.copied ? 'Kode disalin' : '',
+      copy: () => this.setState({ copied: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

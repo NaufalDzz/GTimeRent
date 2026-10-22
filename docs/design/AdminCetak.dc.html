@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>GTime Rent · Cetak riwayat</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0608}
+a{color:#F4B3D3}a:hover{color:#FFFFFF}
+@media print{
+  body{background:#FFFFFF}
+  .no-print{display:none !important}
+  .print-root{background:#FFFFFF !important;padding:0 !important}
+  .sheet{box-shadow:none !important;border:0 !important;border-radius:0 !important;margin:0 !important;max-width:none !important}
+}
+</style>
+</helmet>
+<div class="print-root" style="font-family: Inter, system-ui, sans-serif; color: #F6EEF2; background: #0A0608; min-height: 100vh; padding-bottom: 80px">
+
+<div class="no-print" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 40px; border-bottom: 1px solid #1F151A; background: #0D080A">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
+<a href="Admin.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Panel admin</a>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #94808A">PRATINJAU CETAK</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<label for="p-member" style="font-size: 12px; color: #B3A0AA">Anggota</label>
+<select id="p-member" value="{{member}}" onChange="{{onMember}}" style="min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #3A2830; background: #130C10; color: #F6EEF2; font: inherit; font-size: 14px">
+<option value="all">Semua anggota</option><option value="Anggota Demo 1">Anggota Demo 1</option><option value="Anggota Demo 2">Anggota Demo 2</option><option value="Anggota Demo 3">Anggota Demo 3</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<label for="p-period" style="font-size: 12px; color: #B3A0AA">Periode dibuat</label>
+<input id="p-period" type="text" value="01–22 Okt 2026" readonly style="min-height: 44px; width: 150px; padding: 0 12px; border-radius: 10px; border: 1px solid #3A2830; background: #130C10; color: #F6EEF2; font: inherit; font-size: 14px">
+</div>
+<button type="button" onClick="{{print}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2"></path><rect x="6" y="14" width="12" height="7"></rect></svg>Cetak</button>
+</div>
+</div>
+
+<div style="padding: 40px 24px 0">
+<article class="sheet" style="max-width: 1060px; margin: 0 auto; box-sizing: border-box; padding: 48px 52px; border-radius: 6px; background: #FFFFFF; color: #1A1216; box-shadow: 0 30px 80px rgba(0,0,0,0.55)">
+<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 20px; padding-bottom: 20px; border-bottom: 2px solid #1A1216">
+<div>
+<div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 22px">/GTime Rent</div>
+<h1 style="margin: 6px 0 0; font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">Laporan Riwayat Transaksi</h1>
+</div>
+<dl style="margin: 0; display: grid; grid-template-columns: auto auto; gap: 4px 16px; font-size: 12px">
+<dt style="color: #5E4D56">Dicetak</dt><dd style="margin: 0">22 Okt 2026, 13.10 WIB</dd>
+<dt style="color: #5E4D56">Oleh</dt><dd style="margin: 0">Admin Demo</dd>
+<dt style="color: #5E4D56">Periode</dt><dd style="margin: 0">01–22 Okt 2026 (tanggal dibuat)</dd>
+<dt style="color: #5E4D56">Anggota</dt><dd style="margin: 0">{{memberLabel}}</dd>
+<dt style="color: #5E4D56">Status</dt><dd style="margin: 0">Semua</dd>
+</dl>
+</header>
+
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 860px; margin-top: 20px; border-collapse: collapse; font-size: 12px">
+<thead>
+<tr style="text-align: left; color: #5E4D56">
+<th scope="col" style="padding: 8px 8px 8px 0; border-bottom: 1px solid #1A1216; font-weight: 600">No. transaksi</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600">Anggota</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600">Unit (snapshot)</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600">Status</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600">Mulai sewa</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600">Kembali</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600; text-align: right">Harga paket</th>
+<th scope="col" style="padding: 8px; border-bottom: 1px solid #1A1216; font-weight: 600; text-align: right">Ongkir</th>
+<th scope="col" style="padding: 8px 0 8px 8px; border-bottom: 1px solid #1A1216; font-weight: 600; text-align: right">Denda</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+<tr style="vertical-align: top; color: {{r.fg}}">
+<td style="padding: 10px 8px 10px 0; border-bottom: 1px solid #E4DADF; font-family: 'JetBrains Mono', monospace; white-space: nowrap">{{r.no}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; white-space: nowrap">{{r.member}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; white-space: pre-line; line-height: 1.5">{{r.units}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; white-space: nowrap">{{r.status}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; white-space: nowrap">{{r.start}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; white-space: nowrap">{{r.end}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; text-align: right; white-space: nowrap">{{r.priceLabel}}</td>
+<td style="padding: 10px 8px; border-bottom: 1px solid #E4DADF; text-align: right; white-space: nowrap">{{r.shipLabel}}</td>
+<td style="padding: 10px 0 10px 8px; border-bottom: 1px solid #E4DADF; text-align: right; white-space: nowrap">{{r.fineLabel}}</td>
+</tr>
+</sc-for>
+</tbody>
+<tfoot>
+<tr style="font-weight: 600">
+<td colspan="6" style="padding: 12px 8px 12px 0; border-top: 2px solid #1A1216">Total ({{countLabel}})</td>
+<td style="padding: 12px 8px; border-top: 2px solid #1A1216; text-align: right; white-space: nowrap">{{sumPrice}}</td>
+<td style="padding: 12px 8px; border-top: 2px solid #1A1216; text-align: right; white-space: nowrap">{{sumShip}}</td>
+<td style="padding: 12px 0 12px 8px; border-top: 2px solid #1A1216; text-align: right; white-space: nowrap">{{sumFine}}</td>
+</tr>
+</tfoot>
+</table>
+</div>
+
+<footer style="margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 11px; line-height: 1.6; color: #5E4D56">
+<p style="margin: 0; max-width: 620px">Harga, ongkir, dan denda memakai snapshot saat checkout. Denda final ditagih terpisah dari tagihan awal. Pesanan dibatalkan tidak masuk total. Mulai sewa = waktu semua unit diterima penyewa.</p>
+<span>Halaman 1 dari 1</span>
+</footer>
+</article>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { member: 'all' };
+  }
+  renderVals() {
+    const fmt = (n) => 'Rp' + Number(n).toLocaleString('id-ID');
+    const data = [
+      { no: 'GTR-0014', member: 'Anggota Demo 2', units: 'PER-B2-001 · B2 Mouse + Headset Mid', status: 'Menunggu bayar', start: '—', end: '—', price: 75000, fine: null },
+      { no: 'GTR-0013', member: 'Anggota Demo 3', units: 'PER-B1-001 · B1 Mouse + Headset High', status: 'Lunas', start: '—', end: '—', price: 250000, fine: null },
+      { no: 'GTR-0012', member: 'Anggota Demo 1', units: 'PC-MID-001 · PC Mid + IPS\nPER-A2-001 · A2 Mid-Range Lengkap', status: 'Aktif', start: '22 Okt 10.00', end: 'Tempo 27 Okt 10.00', price: 625000, fine: null },
+      { no: 'GTR-0011', member: 'Anggota Demo 2', units: 'PER-A1-001 · A1 High-End Lengkap', status: 'Dikirim', start: '—', end: '—', price: 350000, fine: null },
+      { no: 'GTR-0010', member: 'Anggota Demo 3', units: 'PC-MID-002 · PC Mid + IPS', status: 'Aktif · terlambat', start: '16 Okt 16.00', end: 'Tempo 21 Okt 16.00', price: 500000, fine: null },
+      { no: 'GTR-0009', member: 'Anggota Demo 1', units: 'PC-HIGH-001 · PC High + OLED\nPER-A1-001 · A1 High-End Lengkap', status: 'Dikembalikan', start: '11 Okt 10.00', end: '16 Okt 10.01', price: 1550000, fine: 250000 },
+      { no: 'GTR-0004', member: 'Anggota Demo 1', units: 'PER-H2-001 · H2 Headset Mid', status: 'Dibatalkan', start: '—', end: '—', price: 50000, fine: null, cancelled: true }
+    ];
+    const m = this.state.member;
+    const list = data.filter((d) => m === 'all' || d.member === m);
+    const counted = list.filter((d) => !d.cancelled);
+    const sum = (k) => counted.reduce((a, d) => a + (d[k] || 0), 0);
+    return {
+      member: m,
+      memberLabel: m === 'all' ? 'Semua anggota' : m,
+      onMember: (e) => this.setState({ member: e.target.value }),
+      print: () => { try { window.print(); } catch (e) {} },
+      rows: list.map((d) => ({ ...d,
+        fg: d.cancelled ? '#8A7A82' : '#1A1216',
+        priceLabel: fmt(d.price), shipLabel: fmt(75000),
+        fineLabel: d.fine ? fmt(d.fine) : (d.status === 'Aktif · terlambat' ? 'berjalan' : '—') })),
+      countLabel: counted.length + ' transaksi',
+      sumPrice: fmt(sum('price')),
+      sumShip: fmt(counted.length * 75000),
+      sumFine: fmt(sum('fine'))
+    };
+  }
+}
+</script>
+</body>
+</html>

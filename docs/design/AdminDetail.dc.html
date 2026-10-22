@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>GTime Rent · Detail transaksi admin</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0608}
+a{color:#F4B3D3}a:hover{color:#FFFFFF}
+input::placeholder,textarea::placeholder{color:#7E6A74}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #F6EEF2; background: #0A0608; min-height: 100vh">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 40px; border-bottom: 1px solid #1F151A">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
+<a href="Admin.dc.html" style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 20px; color: #F6EEF2; text-decoration: none">/GTime Rent</a>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #94808A">PANEL ADMIN</span>
+</div>
+<a href="Admin.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Semua transaksi</a>
+</header>
+
+<div style="max-width: 1280px; margin: 0 auto; padding: 36px 32px 96px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #94808A">TRANSAKSI · ANGGOTA DEMO 3</div>
+<h1 style="margin: 10px 0 0; font-family: Poppins, sans-serif; font-weight: 600; font-size: 34px; letter-spacing: -0.02em">GTR-20261016-0010</h1>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: {{badgeBg}}; font-size: 14px; font-weight: 500; color: {{badgeFg}}"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{badgeFg}}"></span>{{statusLabel}}</span>
+</div>
+
+<div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+<section style="padding: 24px; border-radius: 18px; border: 1px solid #2B1D24; background: #100A0D">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600; color: #D9C7D0">Riwayat status</h2>
+<ol style="list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{timeline}}" as="t" hint-placeholder-count="5">
+<li style="display: flex; gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center">
+<span style="width: 12px; height: 12px; box-sizing: border-box; border-radius: 50%; margin-top: 4px; background: {{t.dot}}; border: {{t.ring}}"></span>
+<span style="flex-grow: 1; width: 1px; min-height: 28px; background: #2B1D24"></span>
+</div>
+<div style="flex-grow: 1; padding-bottom: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px">
+<div><div style="font-size: 14px; font-weight: 500; color: {{t.fg}}">{{t.label}}</div><div style="margin-top: 2px; font-size: 12px; color: #94808A">{{t.who}}</div></div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #B3A0AA">{{t.time}}</div>
+</div>
+</li>
+</sc-for>
+</ol>
+</section>
+
+<section style="padding: 24px; border-radius: 18px; border: 1px solid #2B1D24; background: #100A0D">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600; color: #D9C7D0">Snapshot saat checkout</h2>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #94808A">TIDAK BERUBAH WALAU TARIF MASTER DIUBAH</span>
+</div>
+<div style="margin-top: 14px; border-top: 1px solid #1F151A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #1F151A">
+<div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F4B3D3">PC-MID-002</div><div style="margin-top: 2px; font-size: 14px">PC Mid + IPS</div><div style="margin-top: 2px; font-size: 12px; color: #94808A">PC · monitor + stand · 2 kabel daya, 1 DisplayPort</div></div>
+<div style="text-align: right"><div style="font-size: 14px">Rp500.000</div><div style="margin-top: 2px; font-size: 12px; color: #94808A">denda Rp100.000/hari</div></div>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #1F151A; font-size: 14px; color: #D9C7D0"><span>Ongkir antar-jemput</span><span>Rp75.000</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0"><span style="font-size: 14px; color: #B3A0AA">Tagihan awal</span><span style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 20px">Rp575.000</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="flex: 1 1 220px; padding: 14px; border-radius: 12px; background: #1B1217"><div style="font-size: 12px; color: #94808A">Penerima</div><div style="margin-top: 4px; font-size: 14px">Anggota Demo 3 · [NOMOR TELEPON]</div></div>
+<div style="flex: 1 1 220px; padding: 14px; border-radius: 12px; background: #1B1217"><div style="font-size: 12px; color: #94808A">Alamat · Dayeuhkolot</div><div style="margin-top: 4px; font-size: 14px">[ALAMAT LENGKAP PENERIMA]</div></div>
+</div>
+</section>
+</div>
+
+<aside style="flex: 1 1 380px; min-width: 0; border-radius: 20px; border: 1px solid #3A2830; background: #130C10; overflow: hidden">
+<div style="padding: 20px 24px; border-bottom: 1px solid #2B1D24">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #94808A">AKSI YANG SAH</div>
+<div style="margin-top: 6px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">{{actionTitle}}</div>
+</div>
+
+<sc-if value="{{isPending}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<fieldset style="margin: 0; padding: 0; border: 0">
+<legend style="padding: 0; font-size: 13px; color: #D9C7D0">Metode pembayaran</legend>
+<div style="margin-top: 8px; display: flex; gap: 8px">
+<label style="flex: 1 1 0; display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #E2589C; background: #22101A; font-size: 14px; cursor: pointer"><input type="radio" name="pay" checked style="accent-color: #E2589C">Transfer</label>
+<label style="flex: 1 1 0; display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #3A2830; font-size: 14px; cursor: pointer"><input type="radio" name="pay" style="accent-color: #E2589C">Tunai</label>
+</div>
+</fieldset>
+<button type="button" onClick="{{advance}}" style="min-height: 50px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Konfirmasi lunas</button>
+<div style="margin-top: 8px; padding-top: 18px; border-top: 1px solid #2B1D24; display: flex; flex-direction: column; gap: 8px">
+<label for="cancel-reason" style="font-size: 13px; color: #D9C7D0">Alasan pembatalan (wajib)</label>
+<input id="cancel-reason" type="text" placeholder="3–255 karakter" style="min-height: 46px; padding: 0 14px; border-radius: 12px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px">
+<button type="button" onClick="{{cancel}}" style="min-height: 46px; border-radius: 999px; border: 1px solid #7A3340; background: transparent; color: #FFB4BE; font: inherit; font-size: 14px; cursor: pointer">Batalkan &amp; lepas unit</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isPaid}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<label for="disp-at" style="font-size: 13px; color: #D9C7D0">Waktu kurir berangkat</label>
+<input id="disp-at" type="datetime-local" value="2026-10-16T15:40" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px; color-scheme: dark">
+<p style="margin: 0; font-size: 12px; line-height: 1.6; color: #94808A">Tidak boleh sebelum pembayaran dikonfirmasi atau di masa depan.</p>
+<button type="button" onClick="{{advance}}" style="min-height: 50px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Catat pengiriman</button>
+</div>
+</sc-if>
+
+<sc-if value="{{isDelivery}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<label for="recv-at" style="font-size: 13px; color: #D9C7D0">Semua unit diterima penyewa pada</label>
+<input id="recv-at" type="datetime-local" value="2026-10-16T16:00" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px; color-scheme: dark">
+<div style="padding: 14px; border-radius: 12px; background: #1B1217; font-size: 13px; color: #D9C7D0">Jatuh tempo otomatis: <span style="color: #FFFFFF; font-weight: 600">21 Okt 2026 · 16.00</span> <span style="color: #94808A">(+120 jam)</span></div>
+<button type="button" onClick="{{advance}}" style="min-height: 50px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Catat diterima penyewa</button>
+</div>
+</sc-if>
+
+<sc-if value="{{isActive}}" hint-placeholder-val="{{ true }}">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="padding: 14px; border-radius: 12px; border: 1px solid #5A2A33; background: #1E0E12; font-size: 13px; line-height: 1.55; color: #FFD0D6">Lewat jatuh tempo <span style="font-weight: 600">21 Okt 2026 · 16.00</span>. Unit masih ditahan sampai pengembalian dicatat.</div>
+<label for="ret-at" style="font-size: 13px; color: #D9C7D0">Semua unit diterima GTR pada</label>
+<input id="ret-at" type="datetime-local" value="2026-10-22T12:30" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px; color-scheme: dark">
+<fieldset style="margin: 0; padding: 0; border: 0">
+<legend style="padding: 0; font-size: 13px; color: #D9C7D0">Cek kelengkapan</legend>
+<div style="margin-top: 8px; display: flex; flex-direction: column; gap: 6px; font-size: 13px">
+<label style="display: flex; align-items: center; gap: 10px; min-height: 36px"><input type="checkbox" checked style="width: 16px; height: 16px; accent-color: #E2589C"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #F4B3D3">/PC</span> Satu PC</label>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 36px"><input type="checkbox" checked style="width: 16px; height: 16px; accent-color: #E2589C"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #F4B3D3">/MON</span> Monitor + stand</label>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 36px"><input type="checkbox" checked style="width: 16px; height: 16px; accent-color: #E2589C"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #F4B3D3">/CABLE</span> 2 kabel daya, 1 DisplayPort</label>
+</div>
+</fieldset>
+<label for="ret-note" style="font-size: 13px; color: #D9C7D0">Catatan (opsional)</label>
+<textarea id="ret-note" rows="2" placeholder="Kondisi barang, goresan, dll." style="padding: 10px 14px; border-radius: 12px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px; resize: vertical"></textarea>
+<div style="padding: 16px; border-radius: 12px; background: #1B1217">
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #D9C7D0"><span>Keterlambatan</span><span style="font-family: 'JetBrains Mono', monospace">20 jam 30 menit</span></div>
+<div style="margin-top: 6px; display: flex; justify-content: space-between; font-size: 13px; color: #D9C7D0"><span>Dibulatkan</span><span style="font-family: 'JetBrains Mono', monospace">1 hari × Rp100.000</span></div>
+<div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #2B1D24; display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 13px; color: #B3A0AA">Denda final</span><span style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 22px; color: #FFB4BE">Rp100.000</span></div>
+</div>
+<button type="button" onClick="{{advance}}" style="min-height: 50px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Catat diterima GTR</button>
+</div>
+</sc-if>
+
+<sc-if value="{{isTerminal}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #D9C7D0">{{terminalNote}}</p>
+<a href="#" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F6EEF2; font-size: 14px; text-decoration: none">Cetak riwayat transaksi</a>
+<button type="button" onClick="{{reset}}" style="min-height: 44px; border: 0; background: transparent; color: #B3A0AA; font: inherit; font-size: 13px; text-decoration: underline; cursor: pointer">Ulang demo dari awal</button>
+</div>
+</sc-if>
+</aside>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"startStatus":{"editor":"enum","options":["pending_payment","paid","in_delivery","active","returned","cancelled"],"default":"active"},"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { st: null };
+  }
+  renderVals() {
+    const order = ['pending_payment', 'paid', 'in_delivery', 'active', 'returned'];
+    const st = this.state.st ?? this.props.startStatus ?? 'active';
+    const idx = st === 'cancelled' ? 0 : order.indexOf(st);
+    const B = {
+      pending_payment: ['Menunggu bayar', '#2A1F0E', '#F6CF8E', 'Konfirmasi pembayaran'],
+      paid: ['Lunas', '#0F1C2B', '#9CC8FF', 'Catat keberangkatan kurir'],
+      in_delivery: ['Dikirim', '#1C1530', '#C7B4FF', 'Catat penerimaan penyewa'],
+      active: ['Aktif · Terlambat', '#2E1015', '#FF9AA8', 'Catat pengembalian'],
+      returned: ['Dikembalikan', '#1F1A1D', '#C9B8C1', 'Transaksi selesai'],
+      cancelled: ['Dibatalkan', '#1F1A1D', '#A8949E', 'Transaksi dibatalkan']
+    };
+    const steps = [
+      { label: 'Checkout · unit ditahan', who: 'Anggota Demo 3', time: '16 Okt 15.00' },
+      { label: 'Pembayaran dikonfirmasi (transfer)', who: 'Admin Demo', time: '16 Okt 15.30' },
+      { label: 'Kurir berangkat', who: 'Admin Demo', time: '16 Okt 15.40' },
+      { label: 'Diterima penyewa · jatuh tempo 21 Okt 16.00', who: 'Admin Demo', time: '16 Okt 16.00' },
+      { label: 'Diterima GTR · denda Rp100.000', who: 'Admin Demo', time: '22 Okt 12.30' }
+    ];
+    let timeline = steps.map((s, i) => {
+      const done = i <= idx;
+      const current = i === idx + 1 && st !== 'returned' && st !== 'cancelled';
+      return { ...s, time: done ? s.time : '—', who: done ? s.who : (current ? 'Menunggu tindakan admin' : ''),
+        dot: done ? '#E2589C' : 'transparent', ring: done ? '0' : (current ? '2px solid #E2589C' : '1.5px solid #3A2830'),
+        fg: done ? '#F6EEF2' : '#94808A' };
+    });
+    if (st === 'cancelled') {
+      timeline = [timeline[0], { label: 'Dibatalkan · alasan dicatat, unit dilepas', who: 'Admin Demo', time: '16 Okt 15.20', dot: '#FF9AA8', ring: '0', fg: '#F6EEF2' }];
+    }
+    const b = B[st];
+    return {
+      statusLabel: b[0], badgeBg: b[1], badgeFg: b[2], actionTitle: b[3],
+      timeline,
+      isPending: st === 'pending_payment', isPaid: st === 'paid', isDelivery: st === 'in_delivery', isActive: st === 'active',
+      isTerminal: st === 'returned' || st === 'cancelled',
+      terminalNote: st === 'returned' ? 'Status final. Denda Rp100.000 ditagih terpisah dari tagihan awal dan dilunasi langsung ke admin. Unit PC-MID-002 kembali bisa disewa.' : 'Status final. Pesanan dibatalkan sebelum lunas dan unit sudah dilepas.',
+      advance: () => this.setState({ st: order[Math.min(idx + 1, 4)] }),
+      cancel: () => this.setState({ st: 'cancelled' }),
+      reset: () => this.setState({ st: 'pending_payment' })
+    };
+  }
+}
+</script>
+</body>
+</html>

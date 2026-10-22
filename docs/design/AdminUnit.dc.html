@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>GTime Rent · Admin unit</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0608}
+a{color:#F4B3D3}a:hover{color:#FFFFFF}
+input::placeholder,textarea::placeholder{color:#7E6A74}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #F6EEF2; background: #0A0608; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+<aside style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; border-right: 1px solid #1F151A; background: #0D080A">
+<a href="Main.dc.html" style="display: block; padding: 0 12px; font-family: Poppins, sans-serif; font-weight: 700; font-size: 20px; color: #F6EEF2; text-decoration: none">/GTime Rent</a>
+<div style="margin: 6px 12px 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #94808A">PANEL ADMIN</div>
+<nav aria-label="Menu admin" style="margin-top: 28px; display: flex; flex-direction: column; gap: 4px; font-size: 14px">
+<a href="Admin.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #D9C7D0; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>Transaksi</a>
+<a href="AdminUnit.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; background: #1B1217; color: #FFFFFF; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>Unit</a>
+<a href="AdminKategori.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #D9C7D0; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 12l9 4 9-4M3 17l9 4 9-4"></path></svg>Kategori</a>
+<a href="AdminAnggota.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #D9C7D0; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"></path></svg>Anggota</a>
+<a href="AdminOngkir.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #D9C7D0; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></svg>Ongkir</a>
+<a href="AdminCetak.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #D9C7D0; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2"></path><rect x="6" y="14" width="12" height="7"></rect></svg>Cetak riwayat</a>
+</nav>
+</aside>
+
+<main style="flex: 999 1 640px; min-width: 0; padding: 32px 40px 80px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div>
+<div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #B3A0AA"><span style="width: 6px; height: 6px; background: #E2589C"></span>MASTER DATA · {{total}} UNIT AKTIF</div>
+<h1 style="margin: 12px 0 0; font-family: Poppins, sans-serif; font-weight: 600; font-size: 32px; letter-spacing: -0.02em">Unit</h1>
+</div>
+<button type="button" onClick="{{newUnit}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Tambah unit</button>
+</div>
+
+<div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div style="flex: 999 1 520px; min-width: 0; border-radius: 16px; border: 1px solid #2B1D24; background: #100A0D; overflow-x: auto">
+<table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #94808A">
+<th scope="col" style="padding: 14px 16px; font-weight: 500; border-bottom: 1px solid #2B1D24">KODE / NAMA</th>
+<th scope="col" style="padding: 14px 16px; font-weight: 500; border-bottom: 1px solid #2B1D24">JENIS</th>
+<th scope="col" style="padding: 14px 16px; font-weight: 500; border-bottom: 1px solid #2B1D24; text-align: right">HARGA · DENDA</th>
+<th scope="col" style="padding: 14px 16px; font-weight: 500; border-bottom: 1px solid #2B1D24">KONDISI</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{units}}" as="u" hint-placeholder-count="9">
+<tr style="background: {{u.rowBg}}">
+<td style="padding: 12px 16px; border-bottom: 1px solid #1F151A">
+<button type="button" onClick="{{u.pick}}" style="padding: 0; border: 0; background: transparent; color: #F6EEF2; font: inherit; text-align: left; cursor: pointer">
+<span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #F4B3D3">{{u.code}}</span>
+<span style="display: block; margin-top: 2px; font-size: 14px">{{u.name}}</span>
+</button>
+</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #1F151A; font-size: 13px; color: #B3A0AA; white-space: nowrap">{{u.kindLabel}}</td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #1F151A; text-align: right; white-space: nowrap"><div style="font-size: 14px">{{u.priceLabel}}</div><div style="font-size: 12px; color: #94808A">{{u.fineLabel}}/hari</div></td>
+<td style="padding: 12px 16px; border-bottom: 1px solid #1F151A; white-space: nowrap">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: {{u.cBg}}; font-size: 12px; color: {{u.cFg}}"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{u.cFg}}"></span>{{u.cLabel}}</span>
+<sc-if value="{{u.held}}" hint-placeholder-val="{{ false }}">
+<span style="margin-left: 6px; display: inline-flex; padding: 4px 8px; border-radius: 6px; border: 1px solid #5A4630; font-size: 11px; color: #F6CF8E">Ditahan {{u.heldBy}}</span>
+</sc-if>
+</td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<form aria-label="Form unit" style="flex: 1 1 380px; min-width: 0; border-radius: 20px; border: 1px solid #3A2830; background: #130C10; overflow: hidden">
+<div style="padding: 20px 24px; border-bottom: 1px solid #2B1D24; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #94808A">{{formEyebrow}}</div>
+<div style="margin-top: 4px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">{{formTitle}}</div>
+</div>
+<sc-if value="{{f.held}}" hint-placeholder-val="{{ false }}">
+<span style="padding: 4px 10px; border-radius: 999px; background: #2A1F0E; font-size: 12px; color: #F6CF8E">Sedang ditahan</span>
+</sc-if>
+</div>
+<div style="padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px">
+<label for="u-code" style="font-size: 13px; color: #D9C7D0">Kode unit</label>
+<input id="u-code" type="text" value="{{f.code}}" onChange="{{on.code}}" placeholder="mis. PC-MID-003" style="min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid {{codeBorder}}; background: #0E080B; color: #F6EEF2; font-family: 'JetBrains Mono', monospace; font-size: 13px">
+</div>
+<div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px">
+<label for="u-kind" style="font-size: 13px; color: #D9C7D0">Jenis</label>
+<select id="u-kind" value="{{f.kind}}" onChange="{{on.kind}}" disabled="{{f.held}}" style="min-height: 44px; padding: 0 10px; border-radius: 10px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px"><option value="pc_monitor">PC + monitor</option><option value="peripheral">Peripheral</option></select>
+</div>
+</div>
+<sc-if value="{{codeError}}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: -6px 0 0; font-size: 12px; color: #FF9AA8">{{codeError}}</p>
+</sc-if>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="u-name" style="font-size: 13px; color: #D9C7D0">Nama paket</label>
+<input id="u-name" type="text" value="{{f.name}}" onChange="{{on.name}}" placeholder="2–120 karakter" style="min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="u-spec" style="font-size: 13px; color: #D9C7D0">Spesifikasi</label>
+<textarea id="u-spec" rows="3" value="{{f.spec}}" onChange="{{on.spec}}" placeholder="CPU, GPU, RAM, monitor…" style="padding: 10px 12px; border-radius: 10px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 13px; resize: vertical"></textarea>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="u-contents" style="font-size: 13px; color: #D9C7D0">Kelengkapan tetap <span style="color: #94808A">(satu baris per item)</span></label>
+<textarea id="u-contents" rows="3" value="{{f.contents}}" onChange="{{on.contents}}" disabled="{{f.held}}" style="padding: 10px 12px; border-radius: 10px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; resize: vertical"></textarea>
+</div>
+<sc-if value="{{f.held}}" hint-placeholder-val="{{ false }}">
+<p style="margin: -6px 0 0; font-size: 12px; line-height: 1.5; color: #F6CF8E">Jenis dan kelengkapan dikunci selama unit ditahan pesanan.</p>
+</sc-if>
+<fieldset style="margin: 0; padding: 0; border: 0">
+<legend style="padding: 0; font-size: 13px; color: #D9C7D0">Kategori <span style="color: #94808A">(min. 1)</span></legend>
+<div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{catChips}}" as="c" hint-placeholder-count="8">
+<button type="button" aria-pressed="{{c.on}}" onClick="{{c.toggle}}" style="min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; font: inherit; font-size: 12px; cursor: pointer">{{c.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px">
+<label for="u-price" style="font-size: 13px; color: #D9C7D0">Harga paket ≤5 hari (Rp)</label>
+<input id="u-price" type="number" min="0" step="1" value="{{f.price}}" onChange="{{on.price}}" style="min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px">
+</div>
+<div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px">
+<label for="u-fine" style="font-size: 13px; color: #D9C7D0">Denda / hari (Rp)</label>
+<input id="u-fine" type="number" min="0" step="1" value="{{f.fine}}" onChange="{{on.fine}}" style="min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #3A2830; background: #0E080B; color: #F6EEF2; font: inherit; font-size: 14px">
+</div>
+</div>
+<p style="margin: -6px 0 0; font-size: 12px; color: #94808A">Bilangan bulat. Perubahan hanya berlaku untuk checkout berikutnya.</p>
+<fieldset style="margin: 0; padding: 0; border: 0">
+<legend style="padding: 0; font-size: 13px; color: #D9C7D0">Kondisi</legend>
+<div role="radiogroup" style="margin-top: 8px; display: flex; padding: 4px; border-radius: 999px; background: #0E080B; border: 1px solid #2B1D24">
+<button type="button" role="radio" aria-checked="{{isReady}}" onClick="{{setReady}}" style="flex: 1 1 0; min-height: 38px; border: 0; border-radius: 999px; background: {{readyBg}}; color: {{readyFg}}; font: inherit; font-size: 13px; font-weight: 500; cursor: pointer">Ready</button>
+<button type="button" role="radio" aria-checked="{{isMaint}}" onClick="{{setMaint}}" style="flex: 1 1 0; min-height: 38px; border: 0; border-radius: 999px; background: {{maintBg}}; color: {{maintFg}}; font: inherit; font-size: 13px; font-weight: 500; cursor: pointer">Maintenance</button>
+</div>
+</fieldset>
+<sc-if value="{{saved}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="padding: 12px 14px; border-radius: 10px; background: #10231A; font-size: 13px; color: #9BE7C0">Unit tersimpan. Transaksi lama tetap memakai snapshot harga.</div>
+</sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px">
+<button type="button" onClick="{{save}}" style="flex: 1 1 160px; min-height: 48px; border: 0; border-radius: 999px; background: #F6EEF2; color: #0A0608; font: inherit; font-weight: 600; font-size: 14px; cursor: pointer">{{saveLabel}}</button>
+<sc-if value="{{canArchive}}" hint-placeholder-val="{{ true }}">
+<button type="button" style="min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid #7A3340; background: transparent; color: #FFB4BE; font: inherit; font-size: 14px; cursor: pointer">Arsipkan</button>
+</sc-if>
+<sc-if value="{{archiveLocked}}" hint-placeholder-val="{{ false }}">
+<button type="button" disabled title="Unit masih ditahan pesanan" style="min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px dashed #3A2830; background: transparent; color: #94808A; font: inherit; font-size: 14px">Arsipkan</button>
+</sc-if>
+</div>
+</div>
+</form>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.units = [
+      { code: 'PC-MID-001', name: 'PC Mid + IPS', kind: 'pc_monitor', price: 500000, fine: 100000, cond: 'ready', heldBy: 'GTR-0012', cats: ['Gaming', 'PC + Monitor', 'Mid-Range'], spec: 'Ryzen 5 7600; RTX 5070 12GB; B650M DS3H; 32GB DDR5-6000; NVMe 1TB; PSU 750W; Acer VG271U M3 27" 1440p IPS 180Hz', contents: '/PC - satu PC sesuai spesifikasi\n/MON - satu monitor beserta stand\n/CABLE - dua kabel daya dan satu DisplayPort' },
+      { code: 'PC-MID-002', name: 'PC Mid + IPS', kind: 'pc_monitor', price: 500000, fine: 100000, cond: 'ready', heldBy: 'GTR-0010', cats: ['Gaming', 'PC + Monitor', 'Mid-Range'], spec: 'Ryzen 5 7600; RTX 5070 12GB; B650M DS3H; 32GB DDR5-6000; NVMe 1TB; PSU 750W; Acer VG271U M3 27" 1440p IPS 180Hz', contents: '/PC - satu PC sesuai spesifikasi\n/MON - satu monitor beserta stand\n/CABLE - dua kabel daya dan satu DisplayPort' },
+      { code: 'PC-HIGH-001', name: 'PC High + OLED', kind: 'pc_monitor', price: 1200000, fine: 200000, cond: 'ready', heldBy: '', cats: ['Gaming', 'PC + Monitor', 'High-End', 'OLED'], spec: 'Ryzen 7 9800X3D; RTX 5070 Ti 16GB; B650M DS3H; 32GB DDR5-6000; NVMe 2TB; PSU 850W; tower cooler AM5; MSI MPG271QRX QD-OLED 1440p 360Hz', contents: '/PC - satu PC sesuai spesifikasi\n/MON - satu monitor beserta stand\n/CABLE - dua kabel daya dan satu DisplayPort' },
+      { code: 'PER-A1-001', name: 'A1 High-End Lengkap', kind: 'peripheral', price: 350000, fine: 50000, cond: 'ready', heldBy: 'GTR-0011', cats: ['Gaming', 'Peripheral', 'High-End', 'Lengkap'], spec: 'Logitech PRO X2 Superstrike; Wooting 80HE; PRO X3 Lightspeed; Artisan Ninja FX Zero XL Soft', contents: '/MOUSE - Logitech PRO X2 Superstrike\n/KEYBOARD - Wooting 80HE\n/HEADSET - Logitech PRO X3 Lightspeed\n/MOUSEPAD - Artisan Ninja FX Zero XL Soft\n/ACC - receiver, kabel, adaptor' },
+      { code: 'PER-A2-001', name: 'A2 Mid-Range Lengkap', kind: 'peripheral', price: 125000, fine: 20000, cond: 'ready', heldBy: 'GTR-0012', cats: ['Gaming', 'Peripheral', 'Mid-Range', 'Lengkap'], spec: 'Logitech G304; AULA F75 linear; HyperX Cloud III wired; Logitech G640', contents: '/MOUSE - Logitech G304 Lightspeed\n/KEYBOARD - AULA F75 linear\n/HEADSET - HyperX Cloud III wired\n/MOUSEPAD - Logitech G640\n/ACC - receiver, kabel, adaptor' },
+      { code: 'PER-B1-001', name: 'B1 Mouse + Headset High', kind: 'peripheral', price: 250000, fine: 30000, cond: 'ready', heldBy: 'GTR-0013', cats: ['Gaming', 'Peripheral', 'High-End', 'Mouse + Headset'], spec: 'Logitech PRO X2 Superstrike; PRO X3 Lightspeed; Artisan Ninja FX Zero XL Soft', contents: '/MOUSE - Logitech PRO X2 Superstrike\n/HEADSET - Logitech PRO X3 Lightspeed\n/MOUSEPAD - Artisan Ninja FX Zero XL Soft\n/ACC - receiver, kabel, adaptor' },
+      { code: 'PER-B2-001', name: 'B2 Mouse + Headset Mid', kind: 'peripheral', price: 75000, fine: 15000, cond: 'ready', heldBy: 'GTR-0014', cats: ['Gaming', 'Peripheral', 'Mid-Range', 'Mouse + Headset'], spec: 'Logitech G304; HyperX Cloud III wired; Logitech G640', contents: '/MOUSE - Logitech G304 Lightspeed\n/HEADSET - HyperX Cloud III wired\n/MOUSEPAD - Logitech G640\n/ACC - receiver, kabel, adaptor' },
+      { code: 'PER-H1-001', name: 'H1 Headset High', kind: 'peripheral', price: 100000, fine: 20000, cond: 'maint', heldBy: '', cats: ['Gaming', 'Peripheral', 'High-End', 'Headset'], spec: 'Logitech PRO X3 Lightspeed', contents: '/HEADSET - Logitech PRO X3 Lightspeed\n/ACC - receiver, kabel, adaptor' },
+      { code: 'PER-H2-001', name: 'H2 Headset Mid', kind: 'peripheral', price: 50000, fine: 10000, cond: 'ready', heldBy: '', cats: ['Gaming', 'Peripheral', 'Mid-Range', 'Headset'], spec: 'HyperX Cloud III wired', contents: '/HEADSET - HyperX Cloud III wired\n/ACC - receiver, kabel, adaptor' }
+    ];
+    this.state = { sel: 'PC-HIGH-001', mode: 'edit', form: { ...this.units[2], cats: [...this.units[2].cats] }, saved: false };
+  }
+  renderVals() {
+    const fmt = (n) => 'Rp' + Number(n || 0).toLocaleString('id-ID');
+    const f = this.state.form;
+    const isNew = this.state.mode === 'new';
+    const held = !isNew && !!f.heldBy;
+    const set = (k) => (e) => this.setState({ form: { ...this.state.form, [k]: e.target.value }, saved: false });
+    const dup = isNew && this.units.some((u) => u.code.toLowerCase() === String(f.code).trim().toLowerCase());
+    const codeError = dup ? 'Kode sudah dipakai, termasuk unit yang diarsipkan.' : '';
+    const allCats = ['Gaming', 'PC + Monitor', 'Peripheral', 'High-End', 'Mid-Range', 'OLED', 'Lengkap', 'Mouse + Headset', 'Headset'];
+    const cond = f.cond;
+    return {
+      total: this.units.length,
+      units: this.units.map((u) => {
+        const on = !isNew && u.code === this.state.sel;
+        return { ...u, held: !!u.heldBy,
+          kindLabel: u.kind === 'pc_monitor' ? 'PC + monitor' : 'Peripheral',
+          priceLabel: fmt(u.price), fineLabel: fmt(u.fine),
+          cLabel: u.cond === 'ready' ? 'Ready' : 'Maintenance',
+          cBg: u.cond === 'ready' ? '#10231A' : '#1F1A1D', cFg: u.cond === 'ready' ? '#7FE0AE' : '#C9B8C1',
+          rowBg: on ? '#1B1217' : 'transparent',
+          pick: () => this.setState({ sel: u.code, mode: 'edit', form: { ...u, cats: [...u.cats] }, saved: false }) };
+      }),
+      f: { ...f, held },
+      formEyebrow: isNew ? 'UNIT BARU' : 'UBAH UNIT',
+      formTitle: isNew ? 'Tambah paket fisik' : f.code,
+      saveLabel: isNew ? 'Simpan unit' : 'Simpan perubahan',
+      codeError, codeBorder: codeError ? '#E5677A' : '#3A2830',
+      on: { code: set('code'), name: set('name'), kind: set('kind'), spec: set('spec'), contents: set('contents'), price: set('price'), fine: set('fine') },
+      catChips: allCats.map((label) => {
+        const on = f.cats.includes(label);
+        return { label, on, bg: on ? '#22101A' : 'transparent', fg: on ? '#F6EEF2' : '#B3A0AA', border: on ? '#E2589C' : '#3A2830',
+          toggle: () => this.setState({ form: { ...f, cats: on ? f.cats.filter((c) => c !== label) : [...f.cats, label] }, saved: false }) };
+      }),
+      isReady: cond === 'ready', isMaint: cond !== 'ready',
+      readyBg: cond === 'ready' ? '#F6EEF2' : 'transparent', readyFg: cond === 'ready' ? '#0A0608' : '#D9C7D0',
+      maintBg: cond !== 'ready' ? '#F6EEF2' : 'transparent', maintFg: cond !== 'ready' ? '#0A0608' : '#D9C7D0',
+      setReady: () => this.setState({ form: { ...f, cond: 'ready' }, saved: false }),
+      setMaint: () => this.setState({ form: { ...f, cond: 'maint' }, saved: false }),
+      canArchive: !isNew && !held, archiveLocked: !isNew && held,
+      saved: this.state.saved,
+      save: () => { if (!codeError) this.setState({ saved: true }); },
+      newUnit: () => this.setState({ mode: 'new', sel: '', saved: false, form: { code: 'PC-MID-001', name: '', kind: 'pc_monitor', price: 0, fine: 0, cond: 'ready', heldBy: '', cats: ['Gaming'], spec: '', contents: '' } })
+    };
+  }
+}
+</script>
+</body>
+</html>

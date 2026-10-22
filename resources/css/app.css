@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+@import './components.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Beranda (home.blade.php). Desain Main.dc.html mengandalkan default browser, jadi preflight Tailwind dikembalikan di dalam .gtr-home. */
+.gtr-home {
+    line-height: normal;
+}
+
+.gtr-home,
+.gtr-home *,
+.gtr-home ::before,
+.gtr-home ::after {
+    box-sizing: content-box;
+}
+
+/* Typewriter judul hero */
+[data-typewriter] {
+    position: relative;
+}
+
+.tw-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.tw-js [data-typewriter] .tw-sizer,
+[data-typewriter].tw-on .tw-sizer {
+    visibility: hidden;
+}
+
+.tw-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.tw-char {
+    visibility: hidden;
+}
+
+.tw-char.is-on {
+    visibility: visible;
+}
+
+.tw-caret {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.06em;
+    height: 0.8em;
+    background: var(--accent);
+    animation: tw-blink 1s steps(1, end) infinite;
+}
+
+.tw-caret.is-busy {
+    animation: none;
+}
+
+@keyframes tw-blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.tw-js [data-tw-reveal] {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: var(--tw-delay, 0ms);
+}
+
+.tw-js [data-tw-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* Medan glyph: di atas seluruh halaman, glyph maksimal opacity 0.2 */
+.glyph-field {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    pointer-events: none;
+}

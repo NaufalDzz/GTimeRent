@@ -1,0 +1,9 @@
+stateDiagram-v2
+    [*] --> pending_payment: Checkout valid; unit ditahan
+    pending_payment --> paid: Admin konfirmasi lunas
+    pending_payment --> cancelled: Admin batalkan
+    paid --> in_delivery: Admin catat pengiriman
+    in_delivery --> active: Admin catat penerimaan penyewa
+    active --> returned: Admin catat penerimaan GTR
+    cancelled --> [*]
+    returned --> [*]
