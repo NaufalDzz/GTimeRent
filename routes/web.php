@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('can:member')->group(function () {
         Route::post('/keranjang', [CartController::class, 'store'])->name('cart.store');
-        Route::delete('/keranjang/{unit:code}', [CartController::class, 'destroy'])->name('cart.destroy');
+        Route::delete('/keranjang/{unit:code}', [CartController::class, 'destroy'])->withTrashed()->name('cart.destroy');
         Route::get('/checkout', [CheckoutController::class, 'create'])->name('checkout.create');
         Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
         Route::get('/checkout/gagal', [CheckoutController::class, 'failed'])->name('checkout.failed');

@@ -29,9 +29,19 @@ class Setting extends Model
      */
     public static function current(): self
     {
-        return self::query()->firstOrCreate(['id' => 1], [
+        $setting = self::query()->find(1);
+
+        if ($setting !== null) {
+            return $setting;
+        }
+
+        $setting = new self;
+        $setting->forceFill([
+            'id' => 1,
             'flat_shipping_fee' => self::DEFAULT_SHIPPING_FEE,
             'service_area_text' => self::DEFAULT_AREA_TEXT,
-        ]);
+        ])->save();
+
+        return $setting;
     }
 }

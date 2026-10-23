@@ -71,7 +71,7 @@ SEWA PC GAMING · DIANTAR KE RUMAH
 <div>PER-A2-001 · Peripheral</div>
 <div style="color: #5FD39A">+ ongkir antar-jemput</div>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; font-size: 12px; color: #B3A0AA">5 hari, bayar di awal <span style="font-family: Poppins, sans-serif; font-size: 16px; font-weight: 600; color: #FFFFFF">Rp700.000</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; font-size: 12px; color: #B3A0AA">5 hari, bayar di awal <span style="font-family: Poppins, sans-serif; font-size: 16px; font-weight: 600; color: #FFFFFF">{{ \App\Support\Format::rupiah($example['total']) }}</span></div>
 </div>
 
 <div style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px 40px; padding: 26px 40px; border-top: 1px solid rgba(255,255,255,0.08); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #B3A0AA">
@@ -102,25 +102,25 @@ SEWA PC GAMING · DIANTAR KE RUMAH
 <div style="padding: 8px 20px">
 <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #22171D">
 <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F4B3D3">PC-MID-001</div><div style="margin-top: 4px; font-size: 14px">PC Mid + IPS</div><div style="margin-top: 2px; font-size: 12px; color: #94808A">RTX 5070 · 27" 1440p 180Hz</div></div>
-<div style="font-size: 14px; font-weight: 500; white-space: nowrap">Rp500.000</div>
+<div style="font-size: 14px; font-weight: 500; white-space: nowrap">{{ \App\Support\Format::rupiah($example['pcPrice']) }}</div>
 </div>
 <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #22171D">
 <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F4B3D3">PER-A2-001</div><div style="margin-top: 4px; font-size: 14px">A2 Mid-Range Lengkap</div><div style="margin-top: 2px; font-size: 12px; color: #94808A">Mouse · keyboard · headset · mousepad</div></div>
-<div style="font-size: 14px; font-weight: 500; white-space: nowrap">Rp125.000</div>
+<div style="font-size: 14px; font-weight: 500; white-space: nowrap">{{ \App\Support\Format::rupiah($example['peripheralPrice']) }}</div>
 </div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; font-size: 14px; color: #D9C7D0">Ongkir antar-jemput (sekali)<span style="white-space: nowrap">Rp75.000</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; font-size: 14px; color: #D9C7D0">Ongkir antar-jemput (sekali)<span style="white-space: nowrap">{{ \App\Support\Format::rupiah($shippingFee) }}</span></div>
 </div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 16px 20px; background: #1B1217">
 <span style="font-size: 13px; color: #B3A0AA">Total dibayar di awal</span>
-<span style="font-family: Poppins, sans-serif; font-size: 22px; font-weight: 700">Rp700.000</span>
+<span style="font-family: Poppins, sans-serif; font-size: 22px; font-weight: 700">{{ \App\Support\Format::rupiah($example['total']) }}</span>
 </div>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 260px">
 <div style="padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(10,6,8,0.55)">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #B3A0AA">DENDA / HARI</div>
-<div style="margin-top: 6px; font-family: Poppins, sans-serif; font-size: 20px; font-weight: 600">Rp120.000</div>
-<div style="margin-top: 4px; font-size: 12px; color: #B3A0AA">Rp100.000 + Rp20.000 per unit</div>
+<div style="margin-top: 6px; font-family: Poppins, sans-serif; font-size: 20px; font-weight: 600">{{ \App\Support\Format::rupiah($example['pcFine'] + $example['peripheralFine']) }}</div>
+<div style="margin-top: 4px; font-size: 12px; color: #B3A0AA">{{ \App\Support\Format::rupiah($example['pcFine']) }} + {{ \App\Support\Format::rupiah($example['peripheralFine']) }} per unit</div>
 </div>
 <div style="padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(10,6,8,0.55)">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #B3A0AA">MULAI SEWA</div>
@@ -151,7 +151,7 @@ SEWA PC GAMING · DIANTAR KE RUMAH
 <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="#F4B3D3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="2"></rect><path d="M6 11h.01M9 11h.01M12 11h.01M15 11h.01M18 11h.01M7 14.5h10"></path></svg>
 @endif
 <span style="position: absolute; top: 14px; left: 14px; padding: 4px 8px; border-radius: 6px; background: rgba(10,6,8,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F4B3D3">{{ $u['code'] }}</span>
-<span style="position: absolute; top: 14px; right: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 999px; background: rgba(10,6,8,0.7); font-size: 11px; color: #9BE7C0"><span style="width: 6px; height: 6px; border-radius: 50%; background: #5FD39A"></span>Tersedia</span>
+<span class="badge tone-{{ $u['tone'] }}" style="position: absolute; top: 14px; right: 14px">{{ $u['availability'] }}</span>
 </div>
 <div style="padding: 18px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <div style="font-family: Poppins, sans-serif; font-weight: 600; font-size: 18px">{{ $u['name'] }}</div>
@@ -198,7 +198,7 @@ SEWA PC GAMING · DIANTAR KE RUMAH
 <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: #B3A0AA">Berlaku untuk semua pesanan yang masih berjalan, termasuk yang belum dibayar.</p>
 </div>
 <div style="flex: 1 1 280px; padding: 32px; border-radius: 20px; border: 1px solid #2B1D24; background: #100A0D">
-<div style="font-family: 'JetBrains Mono', monospace; font-weight: 300; font-size: 96px; line-height: 1; letter-spacing: -0.04em">75<span style="font-size: 48px">rb</span></div>
+<div style="font-family: 'JetBrains Mono', monospace; font-weight: 300; font-size: 96px; line-height: 1; letter-spacing: -0.04em">@if ($shippingFee % 1000 === 0){{ $shippingFee / 1000 }}<span style="font-size: 48px">rb</span>@else<span style="font-size: 48px">{{ \App\Support\Format::rupiah($shippingFee) }}</span>@endif</div>
 <div style="margin-top: 14px; font-size: 15px; font-weight: 600">ongkir antar-jemput</div>
 <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: #B3A0AA">Sekali per pesanan, tidak dikali jumlah unit dan tidak ditagih lagi saat penjemputan.</p>
 </div>
@@ -254,7 +254,7 @@ SEWA PC GAMING · DIANTAR KE RUMAH
 <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #94808A">BANTUAN</span>
 <a href="#cara" style="color: #D9C7D0; text-decoration: none">Cara sewa</a>
 <a href="#area" style="color: #D9C7D0; text-decoration: none">Area layanan</a>
-<span style="color: #D9C7D0">Admin: [NOMOR WHATSAPP]</span>
+<span style="color: #D9C7D0">{{ $adminContact }}</span>
 </div>
 </div>
 </div>
