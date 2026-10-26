@@ -8,6 +8,9 @@
 
 <form method="POST" action="{{ $isNew ? route('admin.units.store') : route('admin.units.update', $unit) }}" aria-label="Form unit" class="aside-card card-flush" style="padding: 0" novalidate>
 @csrf
+@if ($inline ?? false)
+<input type="hidden" name="return_to_list" value="1">
+@endif
 @unless ($isNew)
 @method('PUT')
 @endunless

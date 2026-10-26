@@ -18,6 +18,7 @@ docs/00-PANDUAN-DOKUMEN.md
 .env
 .env.backup
 .env.production
+/database/seeders/LocalAdminSeeder.php
 .phpactor.json
 .phpunit.result.cache
 /.codex

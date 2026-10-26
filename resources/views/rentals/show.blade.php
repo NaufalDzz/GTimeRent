@@ -52,7 +52,7 @@
 </div>
 @endif
 
-<div class="row" style="margin-top: 28px; gap: 28px">
+<div class="row member-detail" style="margin-top: 28px; gap: 28px">
 <div class="stack-lg" style="flex: 999 1 520px; min-width: 0; gap: 20px">
 
 @if ($isActive)
@@ -79,17 +79,19 @@
 @if ($isPending)
 <section class="card" aria-labelledby="h-pay">
 <h2 id="h-pay" class="h2" style="font-size: 18px">Cara bayar</h2>
-<div class="row" style="margin-top: 16px; gap: 20px">
-<div style="flex: 1 1 240px; min-width: 0">
-<h3 class="label-mono" style="margin: 0; color: var(--muted)">Transfer bank</h3>
+<div data-payment-tabs>
+<div class="payment-tabs" role="tablist" aria-label="Cara pembayaran">
+<button type="button" class="filter-pill" id="transfer-tab" role="tab" aria-selected="true" aria-controls="transfer-panel" data-payment-tab="transfer">Transfer bank</button>
+<button type="button" class="filter-pill" id="cash-tab" role="tab" aria-selected="false" aria-controls="cash-panel" tabindex="-1" data-payment-tab="cash">Tunai ke admin</button>
+</div>
+<div id="transfer-panel" role="tabpanel" aria-labelledby="transfer-tab" data-payment-panel="transfer">
 <ol class="stack-sm small text-muted" style="margin: 12px 0 0; padding-left: 18px; line-height: 1.55">
 <li>Transfer tepat <b class="mono" style="color: var(--text); font-weight: 500">{{ Format::rupiah($rental->initial_total) }}</b> ke rekening yang diberikan admin.</li>
 <li>Tulis <span class="mono" style="color: var(--text)">{{ $rental->number }}</span> di berita transfer.</li>
 <li>Kirim bukti transfer ke admin. Admin mengonfirmasi secara manual.</li>
 </ol>
 </div>
-<div style="flex: 1 1 240px; min-width: 0">
-<h3 class="label-mono" style="margin: 0; color: var(--muted)">Tunai ke admin</h3>
+<div id="cash-panel" role="tabpanel" aria-labelledby="cash-tab" data-payment-panel="cash" hidden>
 <ol class="stack-sm small text-muted" style="margin: 12px 0 0; padding-left: 18px; line-height: 1.55">
 <li>Hubungi admin untuk janji temu, sebutkan kode pesanan.</li>
 <li>Bayar tunai <b class="mono" style="color: var(--text); font-weight: 500">{{ Format::rupiah($rental->initial_total) }}</b>. Admin mencatat pembayaran di sistem.</li>
@@ -121,6 +123,7 @@
 @endif
 </section>
 
+@unless ($isNew && $isPending)
 <section class="card" aria-labelledby="h-items">
 <h2 id="h-items" class="h2" style="font-size: 18px">Unit &amp; tagihan</h2>
 <ul style="list-style: none; margin: 12px 0 0; padding: 0; border-top: 1px solid var(--rule)">
@@ -166,11 +169,20 @@
 @endif
 @endif
 </section>
+@endunless
 </div>
 
 <aside class="stack" style="flex: 1 1 320px; min-width: 0; gap: 20px">
 <section class="card" aria-labelledby="h-ship">
-<h2 id="h-ship" class="h2" style="font-size: 18px">Pengiriman</h2>
+<h2 id="h-ship" class="h2" style="font-size: 18px">{{ $isNew && $isPending ? 'Ringkasan' : 'Pengiriman' }}</h2>
+@if ($isNew && $isPending)
+<div class="stack-sm" style="margin-top: 16px">
+@foreach ($rental->items as $item)
+<div class="sum-row"><div>{{ $item->name_snapshot }}<div class="code tiny">{{ $item->code_snapshot }}</div></div><span>{{ Format::rupiah($item->package_price_snapshot) }}</span></div>
+@endforeach
+<div class="sum-row"><span>Ongkir flat</span><span>{{ Format::rupiah($rental->shipping_fee_snapshot) }}</span></div>
+</div>
+@endif
 <dl class="stack-sm small" style="margin: 14px 0 0">
 <div><dt class="label-mono">Penerima</dt><dd style="margin: 2px 0 0">{{ $rental->recipient_name }}</dd></div>
 <div><dt class="label-mono">Telepon</dt><dd class="mono" style="margin: 2px 0 0">{{ $rental->recipient_phone }}</dd></div>

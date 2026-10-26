@@ -12,10 +12,15 @@
 @endphp
 
 @section('body')
-<div class="gtr admin-shell">
+<div @class(['gtr', 'admin-shell', 'admin-detail' => View::hasSection('compact-admin')])>
+@hasSection('compact-admin')
+<header class="topbar no-print">
+<a href="{{ route('admin.rentals.index') }}" class="logo">/GTime Rent</a>
+<a href="{{ route('admin.rentals.index') }}" class="small">← Semua transaksi</a>
+</header>
+@else
 <aside class="admin-side no-print">
-<a href="{{ route('home') }}" class="logo" style="display: block; padding: 0 12px">/GTime Rent</a>
-<div class="label-mono" style="margin: 6px 12px 0; letter-spacing: 0.1em">PANEL ADMIN</div>
+<a href="{{ route('admin.rentals.index') }}" class="logo" style="display: block; padding: 0 12px">/GTime Rent</a>
 <nav aria-label="Menu admin" class="admin-nav">
 @foreach ($menu as $entry)
 <a href="{{ route($entry['route']) }}" @if (request()->routeIs(...$entry['match'])) aria-current="page" @endif><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{!! $entry['icon'] !!}</svg>{{ $entry['label'] }}</a>
@@ -30,6 +35,7 @@
 </form>
 </div>
 </aside>
+@endif
 
 <main class="admin-main">
 @if (session('status'))

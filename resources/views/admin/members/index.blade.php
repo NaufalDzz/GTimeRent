@@ -17,7 +17,7 @@
 <a href="{{ route('admin.members.index') }}" class="btn btn-primary btn-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Tambah anggota</a>
 </div>
 
-<div class="row" style="margin-top: 28px; gap: 24px">
+<div class="admin-workspace" style="margin-top: 28px">
 <div class="table-wrap" style="flex: 999 1 520px; min-width: 0">
 <table class="table" style="min-width: 620px">
 <thead>
@@ -57,7 +57,7 @@
 </table>
 </div>
 
-<div style="flex: 1 1 380px; min-width: 0" class="stack">
+<div class="workspace-panel stack">
 <form method="POST" action="{{ $isNew ? route('admin.members.store') : route('admin.members.update', $editing) }}" aria-label="Form anggota" class="aside-card card-flush" style="padding: 0" novalidate>
 @csrf
 @unless ($isNew)
