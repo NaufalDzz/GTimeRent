@@ -4,12 +4,12 @@
 <div class="gtr">
 <header class="topbar no-print">
 <div class="topbar-left">
-<a href="{{ route('home') }}" class="logo">/GTime Rent</a>
+<a href="{{ auth()->user()?->isAdmin() ? route('admin.rentals.index') : route('home') }}" class="logo">/GTime Rent</a>
 <nav aria-label="Navigasi anggota" class="nav-pills">
 <a href="{{ route('catalog.index') }}" class="nav-pill" @if (request()->routeIs('catalog.*')) aria-current="page" @endif>Katalog</a>
 @auth
 @if (auth()->user()->isAdmin())
-<a href="{{ route('admin.rentals.index') }}" class="nav-pill">Panel admin</a>
+<a href="{{ route('admin.rentals.index') }}" class="nav-pill">Dashboard</a>
 @else
 <a href="{{ route('rentals.index') }}" class="nav-pill" @if (request()->routeIs('rentals.*')) aria-current="page" @endif>Pesanan saya</a>
 @endif

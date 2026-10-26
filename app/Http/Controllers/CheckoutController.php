@@ -39,12 +39,12 @@ class CheckoutController extends Controller
             'dailyFineTotal' => (int) $units->sum('daily_fine'),
             'serviceAreas' => config('gtrent.service_areas'),
             'serviceAreaText' => $setting->service_area_text,
-            'defaults' => [
+            'defaults' => array_merge([
                 'recipient_name' => $user->name,
                 'recipient_phone' => $user->profile?->phone,
                 'address' => $user->profile?->address,
                 'service_area' => $user->profile?->service_area,
-            ],
+            ], $request->session()->get('checkout.shipping', [])),
         ]);
     }
 
@@ -59,6 +59,9 @@ class CheckoutController extends Controller
 
         $data = $request->validated();
         $user = $request->user();
+        $request->session()->put('checkout.shipping', $request->safe()->only([
+            'recipient_name', 'recipient_phone', 'address', 'service_area',
+        ]));
 
         try {
             $rental = $checkout->handle(
@@ -80,6 +83,7 @@ class CheckoutController extends Controller
         }
 
         $cart->clear();
+        $request->session()->forget('checkout.shipping');
 
         return redirect()->route('rentals.show', $rental->number)->with('newRental', true);
     }

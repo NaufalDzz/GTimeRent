@@ -9,7 +9,8 @@
 
 @section('body')
 <style>
-.print-sheet{max-width:1060px;margin:0 auto;box-sizing:border-box;padding:48px 52px;border-radius:6px;background:#fff;color:#1a1216;box-shadow:0 30px 80px rgba(0,0,0,.55);font-family:Inter,system-ui,sans-serif}
+.print-wrap{overflow-x:auto}
+.print-sheet{max-width:1300px;min-width:1100px;margin:0 auto;box-sizing:border-box;padding:40px 32px;border-radius:6px;background:#fff;color:#1a1216;box-shadow:0 30px 80px rgba(0,0,0,.55);font-family:Inter,system-ui,sans-serif}
 .print-sheet table{width:100%;min-width:860px;margin-top:20px;border-collapse:collapse;font-size:12px}
 .print-sheet th{padding:8px;border-bottom:1px solid #1a1216;font-weight:600;text-align:left;color:#5e4d56}
 .print-sheet td{padding:10px 8px;border-bottom:1px solid #e4dadf;vertical-align:top}
@@ -24,14 +25,21 @@
   body{background:#fff !important}
   .gtr{background:#fff !important;min-height:0 !important}
   .print-wrap{padding:0 !important}
-  .print-sheet{box-shadow:none;border-radius:0;padding:0;max-width:none}
+  .print-wrap{overflow:visible}
+  .print-sheet{box-shadow:none;border-radius:0;padding:0;max-width:none;min-width:0}
+  .print-sheet table{font-size:10px;table-layout:fixed;overflow-wrap:anywhere}
+  .print-sheet td,.print-sheet th{padding:8px 4px;white-space:normal !important}
+  .print-sheet td div{white-space:normal !important}
+  .print-sheet tr{break-inside:avoid}
+  .print-sheet thead{display:table-header-group}
+  .print-sheet tfoot{display:table-row-group}
   .print-sheet table{min-width:0}
 }
 </style>
 <div class="gtr" style="padding-bottom: 80px">
 <div class="no-print between" style="padding: 18px 40px; border-bottom: 1px solid var(--rule); background: #0d080a; align-items: flex-end">
 <div class="hstack" style="gap: 20px">
-<a href="{{ route('admin.rentals.index', array_filter($filters, fn ($value) => $value !== null)) }}" class="hstack small" style="gap: 8px; min-height: 44px; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Panel admin</a>
+<a href="{{ route('admin.rentals.index', array_filter($filters, fn ($value) => $value !== null)) }}" class="hstack small" style="gap: 8px; min-height: 44px; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Dashboard</a>
 <span class="label-mono">Pratinjau cetak</span>
 </div>
 <form method="GET" action="{{ route('admin.rentals.print') }}" class="hstack" style="align-items: flex-end" aria-label="Filter laporan">

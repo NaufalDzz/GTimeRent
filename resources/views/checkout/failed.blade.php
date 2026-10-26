@@ -53,6 +53,12 @@ Tidak ada unit yang ditahan dari percobaan ini. Belum ada pesanan atau tagihan y
 <div class="mono tiny text-dim">{{ $unit->code }} · {{ Format::rupiah($unit->package_price) }}</div>
 </div>
 <span class="badge tone-{{ $tone }}">{{ $statusLabel }}</span>
+@unless ($unit->isAvailable())
+<form method="POST" action="{{ route('cart.destroy', $unit) }}">
+@csrf @method('DELETE')
+<button type="submit" class="btn btn-sm">Lanjut tanpa {{ $unit->code }}</button>
+</form>
+@endunless
 </li>
 @endforeach
 </ul>

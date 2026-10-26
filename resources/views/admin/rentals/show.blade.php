@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('title', $rental->number)
+@section('compact-admin', 'true')
 
 @php
     use App\Domain\Rental\PaymentMethod;
@@ -67,7 +68,6 @@
 @endphp
 
 @section('content')
-<a href="{{ route('admin.rentals.index') }}" class="hstack small" style="gap: 8px; min-height: 44px; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Semua transaksi</a>
 
 <div class="between" style="margin-top: 12px; align-items: flex-end; gap: 20px">
 <div>
@@ -107,7 +107,7 @@
 </div>
 <div style="margin-top: 14px; border-top: 1px solid var(--rule)">
 @foreach ($rental->items as $item)
-<div class="between" style="align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--rule)">
+<div class="snapshot-line" style="padding: 14px 0; border-bottom: 1px solid var(--rule)">
 <div style="min-width: 0">
 <div class="code" style="font-size: 11px">{{ $item->code_snapshot }}</div>
 <div style="margin-top: 2px; font-size: 14px">{{ $item->name_snapshot }}</div>

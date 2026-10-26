@@ -99,6 +99,7 @@ class CheckoutTest extends TestCase
 
         $rental = Rental::query()->with('items')->sole();
         $response->assertRedirect(route('rentals.show', $rental))->assertSessionHas('newRental', true);
+        $response->assertSessionMissing('checkout.shipping');
 
         $this->assertSame(RentalStatus::PendingPayment, $rental->status);
         $this->assertCount(2, $rental->items);
@@ -247,5 +248,26 @@ class CheckoutTest extends TestCase
         $member = User::factory()->create();
 
         $this->actingAs($member)->get(route('checkout.failed'))->assertRedirect(route('checkout.create'));
+    }
+
+    public function test_replacing_an_unavailable_unit_keeps_the_shipping_details(): void
+    {
+        $member = User::factory()->create();
+        $taken = Unit::factory()->create();
+        $free = Unit::factory()->peripheral()->create();
+        $this->checkoutDirectly(User::factory()->create(), [$taken->id]);
+
+        $this->actingAs($member)->withSession(['cart.units' => [$taken->id, $free->id]])
+            ->post(route('checkout.store'), $this->shippingData(['recipient_name' => 'Penerima Khusus']))
+            ->assertRedirect(route('checkout.failed'));
+        $this->get(route('checkout.failed'))->assertOk()->assertSee(route('cart.destroy', $taken));
+        $this->get(route('catalog.index'))->assertOk();
+        $this->delete(route('cart.destroy', $taken))->assertRedirect(route('checkout.create'));
+
+        $this->get(route('checkout.create'))->assertOk()
+            ->assertSee('Penerima Khusus')
+            ->assertSee('Jl. Telekomunikasi No. 1, Bojongsoang');
+        $this->assertSame([$free->id], session('cart.units'));
+        $this->assertSame(0, Rental::query()->where('user_id', $member->id)->count());
     }
 }

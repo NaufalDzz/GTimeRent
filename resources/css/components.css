@@ -765,6 +765,7 @@
 
 /* Tabel admin */
 .table-wrap {
+    position: relative;
     overflow-x: auto;
     border-radius: 18px;
     border: 1px solid var(--card-line);
@@ -837,12 +838,16 @@
 
 /* Panel admin */
 .admin-shell {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
 }
 
 .admin-side {
-    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
     max-width: 100%;
     padding: 24px 16px;
     border-right: 1px solid var(--rule);
@@ -874,7 +879,7 @@
 }
 
 .admin-user {
-    margin-top: 32px;
+    margin-top: auto;
     padding: 12px;
     border-radius: 12px;
     border: 1px solid var(--card-line);
@@ -887,6 +892,97 @@
     flex: 999 1 640px;
     min-width: 0;
     padding: 32px 40px 80px;
+}
+
+.admin-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+.admin-workspace > *,
+.workspace-panel {
+    min-width: 0;
+}
+
+.workspace-panel .field-row > .field {
+    flex-basis: 100%;
+}
+
+.selected-row {
+    background: var(--soft);
+}
+
+.snapshot-line {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: start;
+    overflow-wrap: anywhere;
+}
+
+.gtr .table td svg {
+    display: inline-block;
+}
+
+[data-payment-panel] ol {
+    list-style: decimal;
+}
+
+.admin-detail {
+    display: block;
+}
+
+.admin-detail .admin-main {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.admin-detail .admin-main > .row,
+.member-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+.shipping-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
+    background: radial-gradient(ellipse at 10% 0%, #4b1533, #170b13 65%);
+}
+
+.shipping-hero::before {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    right: -120px;
+    bottom: -300px;
+    border-radius: 50%;
+    box-shadow: 0 -12px 45px #d380a24d, inset 0 8px 24px #e3b6ca55;
+    background: #160b12;
+    pointer-events: none;
+}
+
+.shipping-hero > * {
+    position: relative;
+}
+
+.payment-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.gtr .payment-tabs [aria-selected='true'] {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+
+.shipping-preview [data-preview-total] {
+    font-size: 22px;
 }
 
 .h1-admin {
@@ -1116,8 +1212,29 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .admin-workspace,
+    .admin-detail .admin-main > .row,
+    .member-detail {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (min-width: 1001px) {
+    #checkout-form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+    }
+}
+
 @media (max-width: 720px) {
+    .admin-shell {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .admin-side {
+        position: static;
+        height: auto;
         flex-basis: 100%;
         border-right: 0;
         border-bottom: 1px solid var(--rule);
@@ -1125,6 +1242,31 @@
 
     .admin-main {
         padding: 24px 16px 64px;
+    }
+
+    .admin-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 18px;
+    }
+
+    .admin-user {
+        margin-top: 16px;
+    }
+
+    .h1-admin,
+    .admin-detail h1.h1-admin {
+        font-size: 26px !important;
+        overflow-wrap: anywhere;
+    }
+
+    .kpi {
+        flex-basis: 140px;
+    }
+
+    .gtr .input {
+        font-size: 16px;
     }
 
     .topbar {

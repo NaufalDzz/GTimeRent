@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Unit;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -40,7 +41,12 @@ class UnitController extends Controller
         }
 
         $units = Unit::withTrashed()
-            ->with('categories')
+            ->with([
+                'categories',
+                'rentalItems' => fn (HasMany $items) => $items
+                    ->whereHas('rental', fn (Builder $rentals) => $rentals->holding())
+                    ->with('rental'),
+            ])
             ->withHeldFlag()
             ->when($query !== '', fn (Builder $units) => $units->where(
                 fn (Builder $match) => $match->where('name', 'like', '%'.$query.'%')->orWhere('code', 'like', '%'.$query.'%'),
@@ -54,12 +60,18 @@ class UnitController extends Controller
             ->orderBy('code')
             ->get();
 
+        $editing = $request->boolean('baru') ? null : ($request->filled('ubah')
+            ? Unit::withTrashed()->with('categories')->where('code', $request->query('ubah'))->firstOrFail()
+            : $units->first());
+
         return view('admin.units.index', [
             'units' => $units,
             'query' => $query,
             'filter' => $filter,
             'filters' => self::FILTERS,
             'activeCount' => Unit::query()->count(),
+            'editing' => $editing,
+            'categories' => $this->activeCategories(),
         ]);
     }
 
@@ -83,7 +95,10 @@ class UnitController extends Controller
             return $unit;
         });
 
-        return redirect()->route('admin.units.edit', $unit)
+        return redirect()->route(
+            $request->boolean('return_to_list') ? 'admin.units.index' : 'admin.units.edit',
+            $request->boolean('return_to_list') ? ['ubah' => $unit->code] : $unit,
+        )
             ->with('status', "Unit {$unit->code} tersimpan dan tampil di katalog.");
     }
 
@@ -120,7 +135,10 @@ class UnitController extends Controller
             $locked->categories()->sync(array_merge($data['categories'], $archivedCategoryIds));
         });
 
-        return redirect()->route('admin.units.edit', $unit)
+        return redirect()->route(
+            $request->boolean('return_to_list') ? 'admin.units.index' : 'admin.units.edit',
+            $request->boolean('return_to_list') ? ['ubah' => $unit->code] : $unit,
+        )
             ->with('status', 'Unit tersimpan. Transaksi lama tetap memakai snapshot harga.');
     }
 

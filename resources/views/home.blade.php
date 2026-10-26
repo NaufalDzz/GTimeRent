@@ -40,7 +40,7 @@ a{color:#F4B3D3}a:hover{color:#FFFFFF}
 </nav>
 <div style="display: flex; align-items: center; gap: 20px">
 @auth
-<a href="{{ auth()->user()->isAdmin() ? route('admin.rentals.index') : route('rentals.index') }}" style="font-size: 14px; color: #F6EEF2; text-decoration: none">{{ auth()->user()->isAdmin() ? 'Panel admin' : 'Pesanan saya' }}</a>
+<a href="{{ auth()->user()->isAdmin() ? route('admin.rentals.index') : route('rentals.index') }}" style="font-size: 14px; color: #F6EEF2; text-decoration: none">{{ auth()->user()->isAdmin() ? 'Dashboard' : 'Pesanan saya' }}</a>
 <a href="{{ route('profile.edit') }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #F6EEF2; color: #0A0608; font-size: 14px; font-weight: 600; text-decoration: none">Profil</a>
 @else
 <a href="{{ route('login') }}" style="font-size: 14px; color: #F6EEF2; text-decoration: none">Masuk</a>
